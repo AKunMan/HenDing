@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HDRecordListCell" customModule="狠盯" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="档案室-闭合" translatesAutoresizingMaskIntoConstraints="NO" id="rIP-bH-gul">
+                        <rect key="frame" x="20" y="20.5" width="9" height="9"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="9" id="FDR-zq-0zW"/>
+                            <constraint firstAttribute="width" constant="9" id="w8b-UQ-ClO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-uN-7EP">
+                        <rect key="frame" x="38" y="16" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="WHK-xR-61g">
+                        <rect key="frame" x="287" y="18.5" width="13" height="13"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Th-zS-0ya">
+                        <rect key="frame" x="9.5" y="10" width="90" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="B4D-Rn-8RN"/>
+                            <constraint firstAttribute="width" constant="90" id="lOv-aM-vF0"/>
+                        </constraints>
+                        <connections>
+                            <action selector="btnClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qng-Hg-Avc"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Th-zS-0ya" firstAttribute="centerX" secondItem="rIP-bH-gul" secondAttribute="centerX" constant="30" id="DRD-UK-CBE"/>
+                    <constraint firstAttribute="trailing" secondItem="WHK-xR-61g" secondAttribute="trailing" constant="20" id="Llf-GZ-cWc"/>
+                    <constraint firstItem="rIP-bH-gul" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="TvB-wa-eJh"/>
+                    <constraint firstItem="3Th-zS-0ya" firstAttribute="centerY" secondItem="rIP-bH-gul" secondAttribute="centerY" id="cHb-IJ-zDU"/>
+                    <constraint firstItem="WHK-xR-61g" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hoJ-ZY-E5m"/>
+                    <constraint firstItem="rIP-bH-gul" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jDL-Ns-EnP"/>
+                    <constraint firstItem="1IS-uN-7EP" firstAttribute="leading" secondItem="rIP-bH-gul" secondAttribute="trailing" constant="9" id="pDU-0m-lL0"/>
+                    <constraint firstItem="1IS-uN-7EP" firstAttribute="centerY" secondItem="rIP-bH-gul" secondAttribute="centerY" id="s3S-uM-8B6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="leadSpace" destination="TvB-wa-eJh" id="2nH-L1-Wiv"/>
+                <outlet property="nameLabel" destination="1IS-uN-7EP" id="lLd-9P-jkO"/>
+                <outlet property="openPic" destination="rIP-bH-gul" id="zYj-6I-bdO"/>
+                <outlet property="pic" destination="WHK-xR-61g" id="GT1-11-dYC"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="117"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="右箭头" width="13" height="13"/>
+        <image name="档案室-闭合" width="9" height="9"/>
+    </resources>
+</document>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--验证码登录-->
+        <scene sceneID="stF-NI-eTO">
+            <objects>
+                <viewController storyboardIdentifier="HDPhoneLoginVC" id="ZMP-08-XYK" userLabel="验证码登录" customClass="HDPhoneLoginVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ni4-N6-CFx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kla-KV-0He">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kla-KV-0He" firstAttribute="leading" secondItem="Ar8-tG-AWy" secondAttribute="leading" id="4gl-zh-tuQ"/>
+                            <constraint firstItem="Ar8-tG-AWy" firstAttribute="bottom" secondItem="kla-KV-0He" secondAttribute="bottom" id="GpA-YO-KsZ"/>
+                            <constraint firstItem="Ar8-tG-AWy" firstAttribute="trailing" secondItem="kla-KV-0He" secondAttribute="trailing" id="NPw-on-vhX"/>
+                            <constraint firstItem="kla-KV-0He" firstAttribute="top" secondItem="ni4-N6-CFx" secondAttribute="top" id="yKY-lQ-4c9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ar8-tG-AWy"/>
+                    </view>
+                    <connections>
+                        <outlet property="refreshTableView" destination="kla-KV-0He" id="FhZ-jJ-4Ie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSQ-y7-JsF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="136.60714285714286"/>
+        </scene>
+        <!--密码登录-->
+        <scene sceneID="4nI-E2-cw8">
+            <objects>
+                <viewController storyboardIdentifier="HDPasswordLoginVC" id="Vqz-3Q-0US" userLabel="密码登录" customClass="HDPasswordLoginVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yLg-Bn-VwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dFy-Uh-Y3L">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dFy-Uh-Y3L" firstAttribute="leading" secondItem="sic-VG-IvR" secondAttribute="leading" id="1mQ-jw-fKe"/>
+                            <constraint firstItem="sic-VG-IvR" firstAttribute="trailing" secondItem="dFy-Uh-Y3L" secondAttribute="trailing" id="BJf-gS-ae9"/>
+                            <constraint firstItem="sic-VG-IvR" firstAttribute="bottom" secondItem="dFy-Uh-Y3L" secondAttribute="bottom" id="DSV-RB-TA2"/>
+                            <constraint firstItem="dFy-Uh-Y3L" firstAttribute="top" secondItem="yLg-Bn-VwJ" secondAttribute="top" id="DxK-7J-gSK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sic-VG-IvR"/>
+                    </view>
+                    <connections>
+                        <outlet property="refreshTableView" destination="dFy-Uh-Y3L" id="CQ7-zo-EJ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rG-TO-R3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466.66666666666669" y="136.60714285714286"/>
+        </scene>
+        <!--Set PwdVC-->
+        <scene sceneID="Grd-Zf-fc4">
+            <objects>
+                <viewController storyboardIdentifier="HDSetPwdVC" id="17o-LG-PVs" customClass="HDSetPwdVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wer-mh-HfA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dPM-YB-xh9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hjf-YH-0GD" firstAttribute="bottom" secondItem="dPM-YB-xh9" secondAttribute="bottom" id="33Z-MC-vOW"/>
+                            <constraint firstItem="dPM-YB-xh9" firstAttribute="leading" secondItem="hjf-YH-0GD" secondAttribute="leading" id="5UJ-8H-SJd"/>
+                            <constraint firstItem="hjf-YH-0GD" firstAttribute="trailing" secondItem="dPM-YB-xh9" secondAttribute="trailing" id="7Io-Dd-j1E"/>
+                            <constraint firstItem="dPM-YB-xh9" firstAttribute="top" secondItem="hjf-YH-0GD" secondAttribute="top" id="TQ1-l6-hMX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hjf-YH-0GD"/>
+                    </view>
+                    <connections>
+                        <outlet property="refreshTableView" destination="dPM-YB-xh9" id="TYb-oQ-rik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTl-rg-7Dg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="137"/>
+        </scene>
+        <!--输入手机号-->
+        <scene sceneID="0ul-fO-ozJ">
+            <objects>
+                <viewController storyboardIdentifier="HDForgetPhoneVC" id="lO2-uB-Uf4" userLabel="输入手机号" customClass="HDForgetPhoneVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfw-PY-yti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uTM-rU-cMO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ucH-og-oDK" firstAttribute="bottom" secondItem="uTM-rU-cMO" secondAttribute="bottom" id="Saw-cS-aGv"/>
+                            <constraint firstItem="uTM-rU-cMO" firstAttribute="leading" secondItem="ucH-og-oDK" secondAttribute="leading" id="WMp-rL-Snq"/>
+                            <constraint firstItem="uTM-rU-cMO" firstAttribute="top" secondItem="ucH-og-oDK" secondAttribute="top" id="ftf-ie-h2M"/>
+                            <constraint firstItem="ucH-og-oDK" firstAttribute="trailing" secondItem="uTM-rU-cMO" secondAttribute="trailing" id="tF7-wx-26Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ucH-og-oDK"/>
+                    </view>
+                    <connections>
+                        <outlet property="refreshTableView" destination="uTM-rU-cMO" id="5a7-3n-6Cb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agd-HU-Rqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="792"/>
+        </scene>
+        <!--安全验证-->
+        <scene sceneID="5fH-J7-Uvn">
+            <objects>
+                <viewController storyboardIdentifier="HDForgetVerifyVC" id="kP6-Wb-94W" userLabel="安全验证" customClass="HDForgetVerifyVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uQn-k2-0I8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYD-U6-86g">
+                                <rect key="frame" x="0.0" y="44" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EO9-jR-xz2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WYD-U6-86g" firstAttribute="top" secondItem="FCf-4b-3Dc" secondAttribute="top" id="Zy5-kq-K3l"/>
+                            <constraint firstItem="EO9-jR-xz2" firstAttribute="leading" secondItem="FCf-4b-3Dc" secondAttribute="leading" id="hdv-RQ-Zbq"/>
+                            <constraint firstItem="FCf-4b-3Dc" firstAttribute="bottom" secondItem="EO9-jR-xz2" secondAttribute="bottom" id="j3i-gX-ot1"/>
+                            <constraint firstItem="FCf-4b-3Dc" firstAttribute="trailing" secondItem="EO9-jR-xz2" secondAttribute="trailing" id="jaW-il-Qkx"/>
+                            <constraint firstItem="EO9-jR-xz2" firstAttribute="top" secondItem="FCf-4b-3Dc" secondAttribute="top" id="kx5-yt-k04"/>
+                            <constraint firstItem="FCf-4b-3Dc" firstAttribute="trailing" secondItem="WYD-U6-86g" secondAttribute="trailing" id="tyV-2O-xYv"/>
+                            <constraint firstItem="WYD-U6-86g" firstAttribute="leading" secondItem="FCf-4b-3Dc" secondAttribute="leading" id="yX5-fO-tyL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FCf-4b-3Dc"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataTF" destination="WYD-U6-86g" id="W9G-Gl-haN"/>
+                        <outlet property="refreshTableView" destination="EO9-jR-xz2" id="xtc-kg-p44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YbM-i5-jAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="792"/>
+        </scene>
+        <!--设置密码-->
+        <scene sceneID="fxV-92-Tno">
+            <objects>
+                <viewController storyboardIdentifier="HDForgetSetPwdVC" id="kOq-VG-eul" userLabel="设置密码" customClass="HDForgetSetPwdVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P4U-sx-DHN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-jO-6I8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FDp-CZ-aQL" firstAttribute="trailing" secondItem="GjY-jO-6I8" secondAttribute="trailing" id="6wv-mU-Oxr"/>
+                            <constraint firstItem="GjY-jO-6I8" firstAttribute="top" secondItem="FDp-CZ-aQL" secondAttribute="top" id="cWK-sv-tt6"/>
+                            <constraint firstItem="GjY-jO-6I8" firstAttribute="leading" secondItem="FDp-CZ-aQL" secondAttribute="leading" id="egv-Vp-pHu"/>
+                            <constraint firstItem="FDp-CZ-aQL" firstAttribute="bottom" secondItem="GjY-jO-6I8" secondAttribute="bottom" id="huh-Le-7UT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FDp-CZ-aQL"/>
+                    </view>
+                    <connections>
+                        <outlet property="refreshTableView" destination="GjY-jO-6I8" id="5AB-hc-uWa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dt4-X8-qz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="792"/>
+        </scene>
+        <!--密码设置成功-->
+        <scene sceneID="hFd-rW-foT">
+            <objects>
+                <viewController storyboardIdentifier="HDForgetSucceedVC" id="Pge-93-I6a" userLabel="密码设置成功" customClass="HDForgetSucceedVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C28-zX-AOY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-wp-ysy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bingo" translatesAutoresizingMaskIntoConstraints="NO" id="z6J-zI-3nU">
+                                        <rect key="frame" x="179" y="124" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="6fM-uS-sRM"/>
+                                            <constraint firstAttribute="width" constant="56" id="F9X-0D-AxC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码设置成功！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYB-fc-DdR">
+                                        <rect key="frame" x="143" y="210" width="128.5" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="aCK-j4-DSM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.12549019610000001" green="0.12941176469999999" blue="0.20392156859999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码设置成功，请返回重新登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfv-DI-hx6">
+                                        <rect key="frame" x="85.5" y="247" width="243" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="0tg-BU-Keu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.58039215686274503" green="0.58431372549019611" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeZ-Jr-dRO">
+                                        <rect key="frame" x="109.5" y="298" width="195" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.74117647060000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="QGY-c2-DKp"/>
+                                            <constraint firstAttribute="height" constant="45" id="eaT-Pi-DBg"/>
+                                        </constraints>
+                                        <state key="normal" title="重新登录">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnClick" destination="Pge-93-I6a" eventType="touchUpInside" id="6MI-il-8aE"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-BL-T7G">
+                                        <rect key="frame" x="109.5" y="358" width="195" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="12D-gu-2ym"/>
+                                            <constraint firstAttribute="height" constant="45" id="Utw-xw-eiK"/>
+                                        </constraints>
+                                        <state key="normal" title="完成">
+                                            <color key="titleColor" red="0.0" green="0.74117647060000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.74117647060000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="wfv-DI-hx6" firstAttribute="centerX" secondItem="WYB-fc-DdR" secondAttribute="centerX" id="0Jq-V3-cnF"/>
+                                    <constraint firstItem="WYB-fc-DdR" firstAttribute="centerX" secondItem="z6J-zI-3nU" secondAttribute="centerX" id="0vG-OT-ft3"/>
+                                    <constraint firstItem="WYB-fc-DdR" firstAttribute="top" secondItem="z6J-zI-3nU" secondAttribute="bottom" constant="30" id="8Ug-UJ-gr7"/>
+                                    <constraint firstItem="nhJ-BL-T7G" firstAttribute="top" secondItem="KeZ-Jr-dRO" secondAttribute="bottom" constant="15" id="QdI-A2-urp"/>
+                                    <constraint firstItem="nhJ-BL-T7G" firstAttribute="centerX" secondItem="KeZ-Jr-dRO" secondAttribute="centerX" id="SD3-fP-wcG"/>
+                                    <constraint firstItem="wfv-DI-hx6" firstAttribute="top" secondItem="WYB-fc-DdR" secondAttribute="bottom" constant="12" id="V3o-Ng-x1q"/>
+                                    <constraint firstItem="z6J-zI-3nU" firstAttribute="centerX" secondItem="Hcl-wp-ysy" secondAttribute="centerX" id="gDn-Zm-hZq"/>
+                                    <constraint firstItem="z6J-zI-3nU" firstAttribute="top" secondItem="Hcl-wp-ysy" secondAttribute="top" constant="124" id="ryW-gZ-6jn"/>
+                                    <constraint firstItem="KeZ-Jr-dRO" firstAttribute="top" secondItem="wfv-DI-hx6" secondAttribute="bottom" constant="30" id="udn-jQ-2YZ"/>
+                                    <constraint firstItem="KeZ-Jr-dRO" firstAttribute="centerX" secondItem="wfv-DI-hx6" secondAttribute="centerX" id="x7P-8b-xzs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e3g-rD-oXB" firstAttribute="trailing" secondItem="Hcl-wp-ysy" secondAttribute="trailing" id="ByL-7n-jyp"/>
+                            <constraint firstItem="Hcl-wp-ysy" firstAttribute="top" secondItem="e3g-rD-oXB" secondAttribute="top" id="DZY-4B-8dG"/>
+                            <constraint firstItem="Hcl-wp-ysy" firstAttribute="leading" secondItem="e3g-rD-oXB" secondAttribute="leading" id="Ts5-ND-9px"/>
+                            <constraint firstItem="e3g-rD-oXB" firstAttribute="bottom" secondItem="Hcl-wp-ysy" secondAttribute="bottom" id="Ys5-Gn-E8k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e3g-rD-oXB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKh-Qk-xbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="792"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bingo" width="56" height="56"/>
+    </resources>
+</document>

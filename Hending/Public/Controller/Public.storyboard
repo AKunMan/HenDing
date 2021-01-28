@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WebVC-->
+        <scene sceneID="7JD-9s-1MN">
+            <objects>
+                <viewController storyboardIdentifier="CGWebVC" id="sjt-sT-XV3" customClass="CGWebVC" customModule="狠盯" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sma-dq-JwG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TsT-Rs-39o">
+                                <rect key="frame" x="0.0" y="44" width="414" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="iQd-PF-ra8"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TsT-Rs-39o" firstAttribute="leading" secondItem="Sma-dq-JwG" secondAttribute="leading" id="8EY-5s-4Bu"/>
+                            <constraint firstAttribute="trailing" secondItem="TsT-Rs-39o" secondAttribute="trailing" id="ggJ-34-0r6"/>
+                            <constraint firstItem="TsT-Rs-39o" firstAttribute="top" secondItem="h3Z-Ou-5n1" secondAttribute="top" id="qKB-ks-x0w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h3Z-Ou-5n1"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="TsT-Rs-39o" id="xoH-LB-yXa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2e-Fi-vFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="102"/>
+        </scene>
+    </scenes>
+</document>

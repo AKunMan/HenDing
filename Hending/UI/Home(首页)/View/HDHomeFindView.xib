@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HDHomeFindView" customModule="狠盯" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发现" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwD-Ub-lRp">
+                    <rect key="frame" x="15" y="10" width="29" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="iW8-zz-BzQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fitFontSize">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9d-rC-fcC">
+                    <rect key="frame" x="15" y="45" width="384" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="k9d-rC-fcC" firstAttribute="top" secondItem="HwD-Ub-lRp" secondAttribute="bottom" constant="15" id="8Hn-la-VAE"/>
+                <constraint firstItem="k9d-rC-fcC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="9GW-L9-1T4"/>
+                <constraint firstItem="HwD-Ub-lRp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="9kZ-qt-FeA"/>
+                <constraint firstItem="HwD-Ub-lRp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Rbg-Nh-5XR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="k9d-rC-fcC" secondAttribute="bottom" id="Xao-r4-s06"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="k9d-rC-fcC" secondAttribute="trailing" constant="15" id="zno-mH-8dG"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bannerGround" destination="k9d-rC-fcC" id="ymp-0U-Uf9"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-131.58482142857142"/>
+        </view>
+    </objects>
+</document>
