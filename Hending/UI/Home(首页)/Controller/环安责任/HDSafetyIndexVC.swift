@@ -18,7 +18,6 @@ class HDSafetyIndexVC: BaseIndexVC {
         super.viewDidLoad()
         showNavTitle(typeName)
         showNavRightImageStr("搜索")
-//        hx_shadowHidden = true
     }
     override func loadData() {
         if Application.shared.typeList.count != 0 {
