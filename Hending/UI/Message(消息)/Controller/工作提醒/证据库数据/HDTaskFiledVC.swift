@@ -30,8 +30,6 @@ class HDTaskFiledVC: BaseViewController {
                                           thumbImage: UIImage(named: "登录_logo"))
     }
     func createWebview(_ url:String) {
-//        let  request = URLRequest(url: URL.init(string: url)!)
-//        wkWebView.load(request)
         let  request = URLRequest(url: URL.init(string: url)!)
         wkWebView.rx.observe(Double.self, "estimatedProgress", options:.new, retainSelf: false).map { (p) -> Float in
             var newProgress:Float = 0
