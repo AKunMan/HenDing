@@ -154,6 +154,6 @@ extension HDMineVC{
     }
     
     func share() {
-        WXManager.shared.sentShareMessage(title: "环安合规", description: "企业环保与安全法律法规智能管理系统", url: "https://files.oss.hen-ding.com/app/stable.html", shareTo: 0, thumbImage: UIImage(named: "登录_logo"))
+        WXManager.shared.sentShareMessage(title: "狠盯", description: "企业环保与安全法律法规智能管理系统", url: "https://files.oss.hen-ding.com/app/stable.html", shareTo: 0, thumbImage: UIImage(named: "登录_logo"))
     }
 }

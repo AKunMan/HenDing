@@ -13,7 +13,7 @@ class HDOperationListM: BaseListM {
         var array = [BaseListModel]()
         array.append(BaseListModel(type:.NormalPushType,
                                    isSelect: true,
-                                   name: "环安合规V1.0操作说明"))
+                                   name: "狠盯V1.0操作说明"))
         array.append(getLineSpace())
         array.append(BaseListModel(type:.NormalPushType,
                                    isSelect: true,
