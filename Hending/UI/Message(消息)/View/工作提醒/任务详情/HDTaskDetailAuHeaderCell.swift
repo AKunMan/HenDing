@@ -63,7 +63,7 @@ class HDTaskDetailAuHeaderCell: BaseCell {
 extension HDTaskDetailAuHeaderCell{
     func setNormal() {
         dclPic.image = UIImage(named: "已处理")
-        sjshPic.image = UIImage(named: "上级审核-橙")
+        sjshPic.image = UIImage(named: "上级审核")
         zzshPic.image = UIImage(named: "最终审核-灰")
         wcPic.image = UIImage(named: "完成-灰")
         dclLabel.textColor = Color_202134
