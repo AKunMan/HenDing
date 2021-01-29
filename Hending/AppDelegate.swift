@@ -16,17 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
     
     let UMAppkey = "5f16aa9609e2e47d892f9e3f"
     /// 微信appkey
+    let WeChatAppkey = "wx15131afd3595ea48"
+    let WeChatAppSecret = "563f3c91ac3aad5a5584620e4a56bc4b"
 //    let WeChatAppkey = "wxba618a886eae1a1c"
 //    let WeChatAppSecret = "74dee5941876646f1707fcd65507e4f1"
-    let WeChatAppkey = "wxba618a886eae1a1c"
-    let WeChatAppSecret = "74dee5941876646f1707fcd65507e4f1"
     let WeChatLink = "https://www.hen-ding.com/"
-    
-//    let UMAppkey = "5f0936e8dbc2ec07204a7d85"
-//    /// 微信appkey
-//    let WeChatAppkey = "wx5a9703c19b2ca731"
-//    let WeChatAppSecret = "31f3b6554ec7f8dc0c3fba6a6da75eb1"
-//    let WeChatLink = "https://www.cqzhongshen.cn/"
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
