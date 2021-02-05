@@ -122,6 +122,7 @@ extension HDHomeVC{
             self.verifyPush(item.data as! HDHomeModel)
         }
         cell.vedioBlock = {[unowned self] in
+            print("视频点击---\(item.content)")
             print("视频点击")
             let url = NSURL(string: item.content)!
             let playerVC = AVPlayerViewController()
