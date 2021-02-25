@@ -20,17 +20,17 @@ class HDWRDynamicCell: BaseCell {
     func loadData(_ model:BaseListModel) {
         dataIcon = model.data as! HDInspectionModel
         nameLabel.text = dataIcon.inspectionName
-        subNameLabel.text = "到期时间:\(dataIcon.inspectionEndTime)"
+        subNameLabel.text = "到期时间:\(dataIcon.inspectionExpireTime)"
         dataLabel.text = "循环周期:\(dataIcon.inspectionCycle)"
         
         if dataIcon.inspectionStatus == "1" {
             markLabel.textColor = Color_00BD71
             markLabel.text = "已完成"
-            btn.setTitleColor(Color_00BD71, for: .normal)
+            btn.setTitleColor(Color_FA5B41, for: .normal)
         }else{
             markLabel.textColor = Color_FA5B41
             markLabel.text = "未完成"
-            btn.setTitleColor(Color_FA5B41, for: .normal)
+            btn.setTitleColor(Color_00BD71, for: .normal)
         }
     }
     

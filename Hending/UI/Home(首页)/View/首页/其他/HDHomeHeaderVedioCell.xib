@@ -131,10 +131,10 @@
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="视频播放" translatesAutoresizingMaskIntoConstraints="NO" id="KA6-nP-C3M">
-                        <rect key="frame" x="20" y="106" width="335" height="130"/>
+                        <rect key="frame" x="20" y="107" width="335" height="130"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezW-Ik-wuL">
-                        <rect key="frame" x="20" y="106" width="335" height="130"/>
+                        <rect key="frame" x="20" y="107" width="335" height="130"/>
                         <connections>
                             <action selector="vedioClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fXS-TQ-gcH"/>
                         </connections>
@@ -155,7 +155,7 @@
                     <constraint firstItem="KA6-nP-C3M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Qbo-1j-8gq"/>
                     <constraint firstItem="ezW-Ik-wuL" firstAttribute="bottom" secondItem="KA6-nP-C3M" secondAttribute="bottom" id="TjZ-GM-43y"/>
                     <constraint firstItem="63X-tH-qjb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="58" id="WIR-Z2-3bQ"/>
-                    <constraint firstAttribute="bottom" secondItem="KA6-nP-C3M" secondAttribute="bottom" constant="54" id="cRh-ys-1Qh"/>
+                    <constraint firstAttribute="bottom" secondItem="KA6-nP-C3M" secondAttribute="bottom" constant="53" id="cRh-ys-1Qh"/>
                     <constraint firstItem="CnQ-Q9-otK" firstAttribute="centerY" secondItem="fNN-rU-w8r" secondAttribute="centerY" id="eCN-wj-d4f"/>
                     <constraint firstAttribute="trailing" secondItem="KA6-nP-C3M" secondAttribute="trailing" constant="20" id="eJP-W7-Wd8"/>
                     <constraint firstAttribute="trailing" secondItem="ilR-cA-Sps" secondAttribute="trailing" constant="90" id="fi6-tu-Qbd"/>
