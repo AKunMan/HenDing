@@ -143,8 +143,8 @@ extension HDApiCompanyManager: TargetType {
              .batchExamine(let pDic),
              .companyWorkHistory(let pDic),
              .documentLeavingMessageAdd(let pDic),
-             .companyInspectionRemindList(let pDic),
-             .companyInspectionSubmit(let pDic):
+             .companyInspectionSubmit(let pDic),
+             .companyInspectionRemindList(let pDic):
             for (k,v) in pDic{
                 params[k] = v
             }
@@ -163,8 +163,7 @@ extension HDApiCompanyManager: TargetType {
     
     var headers: [String : String]? {
         switch self {
-        case .companyInspectionSubmit,
-             .companyWorkProcessSave:
+        case .companyWorkProcessSave:
             return ["User-Agent":"iphone",
                     "token":UserManager.getToken(),
                     "Content-Type":"application/json; charset=utf-8",

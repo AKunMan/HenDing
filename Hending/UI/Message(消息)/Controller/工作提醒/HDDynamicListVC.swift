@@ -46,9 +46,9 @@ extension HDDynamicListVC{
     }
     
     func doneClick(_ model:HDInspectionModel) {
-        if model.inspectionStatus == "1" {
-            return
-        }
+//        if model.inspectionStatus == "1" {
+//            return
+//        }
         showAlertTips(title: nil,
                       msg: "你确定完成此项工作吗？",
                       sure: "确定",

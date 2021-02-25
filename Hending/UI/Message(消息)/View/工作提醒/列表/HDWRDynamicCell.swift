@@ -36,9 +36,9 @@ class HDWRDynamicCell: BaseCell {
     
     var block: VoidBlock?
     @IBAction func btnClick(){
-        if dataIcon.inspectionStatus == "1" {
-            return
-        }
+//        if dataIcon.inspectionStatus == "1" {
+//            return
+//        }
         block?()
     }
     
