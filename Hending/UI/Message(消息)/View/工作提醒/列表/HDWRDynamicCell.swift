@@ -26,7 +26,7 @@ class HDWRDynamicCell: BaseCell {
         if dataIcon.inspectionStatus == "1" {
             markLabel.textColor = Color_00BD71
             markLabel.text = "已完成"
-            btn.setTitleColor(Color_FA5B41, for: .normal)
+            btn.setTitleColor(Color_00BD71, for: .normal)
         }else{
             markLabel.textColor = Color_FA5B41
             markLabel.text = "未完成"
