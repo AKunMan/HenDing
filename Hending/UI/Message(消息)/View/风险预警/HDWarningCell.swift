@@ -13,6 +13,7 @@ class HDWarningCell: BaseCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var subNameLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var headView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var pic: UIImageView!
@@ -44,5 +45,37 @@ class HDWarningCell: BaseCell {
         }else if model.placeType == .BottomType {
             bottomView.isHidden = true
         }
+        
+        let typeStr = getTypeStr(remind.typeTreeList)
+        typeLabel.text = "所属分类:\(typeStr)"
+    }
+    
+    func getTypeStr(_ list:[HDTypeTreeModel]) -> String{
+        var str = ""
+        for item in list {
+            let parentId = FS(item.typeParentId)
+            if parentId.count == 0 || parentId == "0" {
+                str += item.typeName
+                str += getTypeStrWithId(list,
+                                        FS(item.typeId))
+                break
+            }
+        }
+        return str
+    }
+    
+    func getTypeStrWithId(_ list:[HDTypeTreeModel],
+                          _ typeId:String) -> String {
+        var str = ""
+        for item in list {
+            let parentId = FS(item.typeParentId)
+            if typeId == parentId {
+                str += " > \(item.typeName)"
+                str += getTypeStrWithId(list,
+                                        FS(item.typeId))
+                break
+            }
+        }
+        return str
     }
 }

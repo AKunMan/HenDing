@@ -28,7 +28,7 @@ class HDWorkModel: BaseHandyModel {
     var workExecuteCycle = ""
     var workExecuteCycleType = ""
     var workCycle = ""
-    
+    var typeTreeList = [HDTypeTreeModel]()
 }
 
 
@@ -47,6 +47,16 @@ class HDProcessModel: BaseHandyModel {
     
 }
 
+class HDTypeTreeModel: BaseHandyModel {
+    var beginTime = ""
+    var endTime = ""
+    var isList = true
+    var littleRedDot = true
+    var typeParentId = ""
+    var typeId = ""
+    var typeName = ""
+}
+
 class HDWorkRemindModel: BaseHandyModel {
     var remindCompanyId = ""            //公司编号
     var remindId = ""                   //提醒ID
@@ -56,10 +66,13 @@ class HDWorkRemindModel: BaseHandyModel {
     var remindWorkId = ""               //任务ID，提醒的那个任务
     var info = HDTradeDocumentInfo()    //文档详情
     var companyWorkInfo = HDWorkModel() //任务
+    var typeTreeList = [HDTypeTreeModel]()
+    
     
     init(_ info:HDTradeDocumentInfo) {
         self.info = info
         self.remindTime = info.infoRemindTime
+        self.typeTreeList = info.typeTreeList
     }
     
     required init() {
@@ -99,7 +112,7 @@ class HDTradeDocumentInfo: BaseHandyModel {
     var workExecuteCycleType = ""
     var workExecuteCycle = ""
     var workCycle = ""
-    
+    var typeTreeList = [HDTypeTreeModel]()
 }
 
 class HDTradeDocumentInfoTags: BaseHandyModel {

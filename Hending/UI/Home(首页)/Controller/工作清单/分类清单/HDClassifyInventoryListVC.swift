@@ -90,7 +90,8 @@ extension HDClassifyInventoryListVC{
         networkM.requestCompany(.classifyList(para)).subscribe(onNext: { [unowned self] (res) in
             let data = DataListModeCtrl<HDTradeDocumentInfo>.deserialize(from: res)!
             if data.code == 200 {
-                self.dataArray = HDClassifyInvM.getDataArray(data.data,self.titles)
+                self.dataArray = HDClassifyInvM.getDataArray(data.data,
+                                                             self.titles)
                 self.reloadDataArray()
                 self.hiddenFooter()
             }

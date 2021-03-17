@@ -86,13 +86,13 @@ extension HDPlanInventoryListVC{
     
     func pushTaskDetail(_ model:HDWorkRemindModel) {
         let vc = push("HDTaskDetailVC", sb: "HDMessage") as! HDTaskDetailVC
-        vc.workId = model.info.workId
-        vc.workStatus = model.info.infoWorkStatus
+        vc.workId = model.companyWorkInfo.workId
+        vc.workStatus = model.companyWorkInfo.workStatus
     }
     func pushTaskAudit(_ model:HDWorkRemindModel) {
         let vc = push("HDTaskAuditVC", sb: "HDMessage") as! HDTaskAuditVC
-        vc.workId = model.info.workId
-        vc.workStatus = model.info.infoWorkStatus
+        vc.workId = model.companyWorkInfo.workId
+        vc.workStatus = model.companyWorkInfo.workStatus
     }
 
 }
@@ -101,7 +101,7 @@ extension HDPlanInventoryListVC{
 extension HDPlanInventoryListVC{
     func getData() {
         let para = [String:String]()
-        networkM.requestCompany(.workRemindList(para)).subscribe(onNext: { [unowned self] (res) in
+        networkM.requestCompany(.planList(para)).subscribe(onNext: { [unowned self] (res) in
             let data = DataListModeCtrl<HDWorkRemindModel>.deserialize(from: res)!
             if data.code == 200 {
                 self.dataArray = HDClassifyInvM.getPlanDataArray(data.data,
