@@ -14,6 +14,7 @@ enum HDApiPublicManager{
     case verifySmsCode([String : Any])  //验证、验证码
     
     case adviseFeedback([String : Any]) //反馈意见
+    case questionReport([String : Any]) //问题上报
 }
 
 extension HDApiPublicManager: TargetType {
@@ -31,6 +32,8 @@ extension HDApiPublicManager: TargetType {
             return "v1/public/sms/verifySmsCode"
         case .adviseFeedback:
             return "v1/adviseFeedback/save"
+        case .questionReport:
+            return "v1/companyQuestionReport/add"
         }
     }
     
@@ -52,7 +55,8 @@ extension HDApiPublicManager: TargetType {
                 params[k] = v
             }
             break
-        case .adviseFeedback(let pDic):
+        case .adviseFeedback(let pDic),
+             .questionReport(let pDic):
             return .requestData(jsonToData(jsonDic: pDic)!)
         }
         return .requestParameters(parameters: params, encoding: URLEncoding.default)
@@ -60,7 +64,8 @@ extension HDApiPublicManager: TargetType {
     
     var headers: [String : String]? {
         switch self {
-        case .adviseFeedback:
+        case .adviseFeedback,
+             .questionReport:
             return ["User-Agent":"iphone",
                     "token":UserManager.getToken(),
                     "Content-Type":"application/json; charset=utf-8",

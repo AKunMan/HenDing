@@ -37,8 +37,6 @@ extension HDAdviseVC{
         submitData()
     }
     override func postData() {
-//        paraData["deviceCode"] = IPHONEUUID.lowercased().md5
-//        print(paraData)
         let adv = AdviseFeedbackModel()
         adv.deviceCode = IPHONEUUID.lowercased()
         adv.feedbackContent = FS(paraData["feedbackContent"])
