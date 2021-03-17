@@ -55,6 +55,8 @@ class HDHomeButtonModel: BaseHandyModel {
     var iconUrl = ""        //图标地址
     var tradeType = ""      //trade证据库，publicity公示信息,可用值:trade,publicity,document
     var displayStyle = ""   //展示风格：menuGroupList环安责任展示风格,     menuHeadList公示信息展示风格, menuInfo警钟常鸣、利好政策展示风格, menuGroupTagList知识百科展示风格,可用值:menuGroupList,menuHeadList,menuInfo,menuGroupTagList
+    var littleRedDot = false
+    var littleRedDotCount = 0
 }
 
 class HDHomeTabModel: NSObject{
