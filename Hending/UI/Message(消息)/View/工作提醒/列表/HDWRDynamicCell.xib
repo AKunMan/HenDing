@@ -40,13 +40,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuq-8v-zK2">
-                                <rect key="frame" x="239" y="8" width="66" height="34"/>
+                                <rect key="frame" x="239" y="12.5" width="66" height="25"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.98039215690000003" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="YC2-Y7-VyI"/>
+                                    <constraint firstAttribute="height" constant="25" id="YC2-Y7-VyI"/>
                                     <constraint firstAttribute="width" constant="66" id="jrc-o1-n3q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="执行">
                                     <color key="titleColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -65,8 +65,34 @@
                                     <action selector="btnClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e1A-bX-joR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwS-Dn-XCU">
+                                <rect key="frame" x="239" y="41.5" width="66" height="25"/>
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.21568627450980393" blue="0.21568627450980393" alpha="0.30419766173070789" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="4kA-ap-Ufy"/>
+                                    <constraint firstAttribute="width" constant="66" id="iro-wt-bM3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="问题上报">
+                                    <color key="titleColor" red="0.8901960784313725" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8901960784313725" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="subBtnClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KFe-9O-Oyw"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-AF-C9d">
-                                <rect key="frame" x="256.5" y="52" width="31" height="15"/>
+                                <rect key="frame" x="256.5" y="70.5" width="31" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -81,13 +107,15 @@
                         <constraints>
                             <constraint firstItem="SH0-TJ-Uhb" firstAttribute="leading" secondItem="hpO-gp-aqT" secondAttribute="leading" constant="15" id="0SL-BT-h6l"/>
                             <constraint firstItem="zIg-zE-EGf" firstAttribute="leading" secondItem="hpO-gp-aqT" secondAttribute="leading" constant="15" id="9Qp-On-0JT"/>
+                            <constraint firstItem="QwS-Dn-XCU" firstAttribute="top" secondItem="Xuq-8v-zK2" secondAttribute="bottom" constant="4" id="9a5-Px-rBh"/>
                             <constraint firstItem="r6o-hv-sL8" firstAttribute="top" secondItem="zIg-zE-EGf" secondAttribute="bottom" constant="8" id="Cdr-ZV-llU"/>
-                            <constraint firstItem="BP8-AF-C9d" firstAttribute="top" secondItem="Xuq-8v-zK2" secondAttribute="bottom" constant="10" id="GS9-8a-8iX"/>
                             <constraint firstItem="BP8-AF-C9d" firstAttribute="centerX" secondItem="Xuq-8v-zK2" secondAttribute="centerX" id="Gt9-hZ-oqg"/>
                             <constraint firstAttribute="trailing" secondItem="Xuq-8v-zK2" secondAttribute="trailing" constant="15" id="HpP-hz-hEs"/>
                             <constraint firstAttribute="bottom" secondItem="r6o-hv-sL8" secondAttribute="bottom" constant="14" id="LZz-VT-9AL"/>
+                            <constraint firstItem="BP8-AF-C9d" firstAttribute="top" secondItem="QwS-Dn-XCU" secondAttribute="bottom" constant="4" id="U6c-ea-QwS"/>
                             <constraint firstItem="r6o-hv-sL8" firstAttribute="leading" secondItem="zIg-zE-EGf" secondAttribute="leading" id="ZZ1-e3-pg0"/>
                             <constraint firstAttribute="trailing" secondItem="SH0-TJ-Uhb" secondAttribute="trailing" constant="80" id="hZ8-f3-EFJ"/>
+                            <constraint firstItem="QwS-Dn-XCU" firstAttribute="trailing" secondItem="Xuq-8v-zK2" secondAttribute="trailing" id="hwH-ox-BDz"/>
                             <constraint firstItem="SH0-TJ-Uhb" firstAttribute="top" secondItem="hpO-gp-aqT" secondAttribute="top" constant="16" id="tTg-Hn-oOE"/>
                             <constraint firstItem="Xuq-8v-zK2" firstAttribute="centerY" secondItem="SH0-TJ-Uhb" secondAttribute="centerY" id="vhd-9M-5Tl"/>
                             <constraint firstItem="zIg-zE-EGf" firstAttribute="top" secondItem="SH0-TJ-Uhb" secondAttribute="bottom" constant="10" id="wGh-FZ-f3e"/>
@@ -107,6 +135,7 @@
                 <outlet property="dataLabel" destination="r6o-hv-sL8" id="Dtl-on-dpq"/>
                 <outlet property="markLabel" destination="BP8-AF-C9d" id="K4X-kg-GFL"/>
                 <outlet property="nameLabel" destination="SH0-TJ-Uhb" id="9I5-LA-Wiz"/>
+                <outlet property="subBtn" destination="QwS-Dn-XCU" id="SGQ-hU-mEL"/>
                 <outlet property="subNameLabel" destination="zIg-zE-EGf" id="CDQ-Jr-RwO"/>
             </connections>
             <point key="canvasLocation" x="-168.11594202898553" y="63.616071428571423"/>

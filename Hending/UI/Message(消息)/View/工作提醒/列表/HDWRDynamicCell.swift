@@ -15,6 +15,7 @@ class HDWRDynamicCell: BaseCell {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var markLabel: UILabel!
     @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var subBtn: UIButton!
     
     var dataIcon = HDInspectionModel()
     func loadData(_ model:BaseListModel) {
@@ -36,10 +37,11 @@ class HDWRDynamicCell: BaseCell {
     
     var block: VoidBlock?
     @IBAction func btnClick(){
-//        if dataIcon.inspectionStatus == "1" {
-//            return
-//        }
         block?()
     }
     
+    var reportBlock: VoidBlock?
+    @IBAction func subBtnClick(){
+        reportBlock?()
+    }
 }

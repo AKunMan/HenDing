@@ -68,9 +68,17 @@ extension HDDynamicInventoryListVC{
         cell.block = {[unowned self] in
             self.doneClick(item.data as! HDInspectionModel)
         }
+        cell.reportBlock = {[unowned self] in
+            self.reportClick(item.data as! HDInspectionModel)
+        }
         return cell
     }
     
+    func reportClick(_ model:HDInspectionModel) {
+//        let vc = HDProblemReportVC()
+        let vc = push("HDProblemReportVC", sb: "HDHelp") as! HDProblemReportVC
+        vc.report = model
+    }
     func doneClick(_ model:HDInspectionModel) {
         if model.inspectionStatus == "1" {
             return

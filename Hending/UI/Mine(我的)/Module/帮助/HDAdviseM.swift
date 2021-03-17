@@ -41,4 +41,41 @@ class HDAdviseM: BaseEditM {
                                    name: "上传"))
         return array
     }
+    
+    class func getReportArray() -> [BaseEditModel] {
+        var array = [BaseEditModel]()
+        array.append(getSpace(20))
+        array.append(BaseEditModel(type:.TitleType,
+                                   name: "问题描述"))
+        array.append(getSpace(20))
+        array.append(BaseEditModel(type:.TvType,
+                                   name: "请填写问题描述，内容请保持在300字以内",
+                                   mark: "reportRemark",
+                                   minLength:10,
+                                   maxLength: 300))
+        array.append(getSpace(20))
+        array.append(BaseEditModel(type:.TitleType,
+                                   name: "上传图片",
+                                   subName: "(提供问题截图)"))
+        array.append(getSpace(10))
+        let picM = BaseEditModel(type: .UploadType,
+                                 judge: true,
+                                 maxLength: 5)
+        picM.dataArray = [ChooseModel()]
+        array.append(picM)
+        array.append(getSpace(10))
+        array.append(BaseEditModel(type:.TitleType,
+                                   name: "上传视频",
+                                   subName: "(提供问题截图)"))
+        array.append(getSpace(10))
+        let vidoM = BaseEditModel(type: .UploadType,
+                                  judge: true,
+                                  maxLength: 1)
+        vidoM.dataArray = [ChooseModel()]
+        array.append(vidoM)
+        array.append(getSpace(20))
+        array.append(BaseEditModel(type:.SubmitType,
+                                   name: "上报"))
+        return array
+    }
 }

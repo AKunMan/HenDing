@@ -19,6 +19,7 @@
 		061F4B15250CB66B00E43AD3 /* HDTaskDetailNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061F4B13250CB66B00E43AD3 /* HDTaskDetailNormalCell.xib */; };
 		061F4B18250CB68A00E43AD3 /* HDTaskDetailClickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F4B16250CB68A00E43AD3 /* HDTaskDetailClickCell.swift */; };
 		061F4B19250CB68A00E43AD3 /* HDTaskDetailClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061F4B17250CB68A00E43AD3 /* HDTaskDetailClickCell.xib */; };
+		062624702601E4C400967A07 /* HDProblemReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626246F2601E4C400967A07 /* HDProblemReportVC.swift */; };
 		06264A212591BD3E0049B5EE /* HDHomeHeaderVedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06264A1F2591BD3E0049B5EE /* HDHomeHeaderVedioCell.swift */; };
 		06264A222591BD3E0049B5EE /* HDHomeHeaderVedioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06264A202591BD3E0049B5EE /* HDHomeHeaderVedioCell.xib */; };
 		068C808B251AE5AA0041BA51 /* HDTaskDetailDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C8089251AE5A90041BA51 /* HDTaskDetailDeleteCell.swift */; };
@@ -384,6 +385,7 @@
 		061F4B13250CB66B00E43AD3 /* HDTaskDetailNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDTaskDetailNormalCell.xib; sourceTree = "<group>"; };
 		061F4B16250CB68A00E43AD3 /* HDTaskDetailClickCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDTaskDetailClickCell.swift; sourceTree = "<group>"; };
 		061F4B17250CB68A00E43AD3 /* HDTaskDetailClickCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDTaskDetailClickCell.xib; sourceTree = "<group>"; };
+		0626246F2601E4C400967A07 /* HDProblemReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDProblemReportVC.swift; sourceTree = "<group>"; };
 		06264A1F2591BD3E0049B5EE /* HDHomeHeaderVedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDHomeHeaderVedioCell.swift; sourceTree = "<group>"; };
 		06264A202591BD3E0049B5EE /* HDHomeHeaderVedioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDHomeHeaderVedioCell.xib; sourceTree = "<group>"; };
 		068C8089251AE5A90041BA51 /* HDTaskDetailDeleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDTaskDetailDeleteCell.swift; sourceTree = "<group>"; };
@@ -1294,6 +1296,7 @@
 				335FE481247E791A002F28D3 /* HDHelp.storyboard */,
 				335FE485247E79D3002F28D3 /* HDOperationListVC.swift */,
 				3392ADF4249C63CE006762B9 /* HDAdviseVC.swift */,
+				0626246F2601E4C400967A07 /* HDProblemReportVC.swift */,
 			);
 			path = "帮助";
 			sourceTree = "<group>";
@@ -2484,6 +2487,7 @@
 				33FCCE77247CB5B8006B7EE3 /* MCSpaceCell.swift in Sources */,
 				332BC695248E1732003EEB3E /* Tools.swift in Sources */,
 				3359520224907AE7009A9621 /* HDApiCompanyManager.swift in Sources */,
+				062624702601E4C400967A07 /* HDProblemReportVC.swift in Sources */,
 				336BA9D424A0908900A5CC8A /* HDEncyclopediaM.swift in Sources */,
 				33F4D0072480D9CF0051A0C5 /* HDWarningListM.swift in Sources */,
 				33B58DC7247B5FEC001E8C9E /* AppDelegate.swift in Sources */,

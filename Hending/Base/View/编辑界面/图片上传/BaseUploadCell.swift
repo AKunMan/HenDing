@@ -100,7 +100,6 @@ extension BaseUploadCell{
                 
                 print("图片上传")
                 self.addBlock?(img,ip.row)
-//                self.setImg(img)
             }
         }
     }

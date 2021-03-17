@@ -139,6 +139,10 @@ extension HDBaseEditVC{
             if model.dataArray.count == 0{
                 model.dataArray = [ChooseModel()]
             }
+            let lastModel = model.dataArray[model.dataArray.count - 1] as! ChooseModel
+            if lastModel.name.count > 0 {
+                model.dataArray.append(ChooseModel())
+            }
             self.refreshTableView.reloadData()
         }
         return cell
@@ -190,9 +194,14 @@ extension HDBaseEditVC{
                     currentM.name = url
                     currentM.data = img
                 }else{
-                    let lModel = ChooseModel(name:url,judge: true,data: img)
+                    let lModel = ChooseModel(name:url,
+                                             judge: true,
+                                             data: img)
                     if model.judge{
                         model.dataArray.insert(lModel, at: index)
+                        if index == model.maxLength - 1 {
+                            model.dataArray.remove(at: model.maxLength)
+                        }
                     }else{
                         model.dataArray = [lModel]
                     }
