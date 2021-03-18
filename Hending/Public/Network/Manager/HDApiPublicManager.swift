@@ -45,7 +45,6 @@ extension HDApiPublicManager: TargetType {
         case .questionReport:
             return "v1/companyQuestionReport/add"
         case .companyInspectionSubmit:
-//            return "v1/companyInspection/submit?id=\(FS(pDic["id"]))"
             return ""
         }
     }
@@ -81,12 +80,8 @@ extension HDApiPublicManager: TargetType {
     var headers: [String : String]? {
         switch self {
         case .adviseFeedback,
-             .questionReport:
-            return ["User-Agent":"iphone",
-                    "token":UserManager.getToken(),
-                    "Content-Type":"application/json; charset=utf-8",
-                    "apiv":"1.1"]
-        case .companyInspectionSubmit:
+             .questionReport,
+             .companyInspectionSubmit:
             return ["User-Agent":"iphone",
                     "token":UserManager.getToken(),
                     "Content-Type":"application/json; charset=utf-8",

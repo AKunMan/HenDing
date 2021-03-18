@@ -20,6 +20,7 @@ enum HDApiIndexManager{
     case likesSave([String : Any])          //点赞
     case likesRemove([String : Any])        //删除点赞
     case sysDocTypeInfo([String : Any])     //根据类型-查询详情数据
+    case pushMessage                        //查询首页推送消息
 }
 
 extension HDApiIndexManager: TargetType {
@@ -29,6 +30,8 @@ extension HDApiIndexManager: TargetType {
     
     var path: String {
         switch self {
+        case .pushMessage:
+            return "v1/companyPush/queryIndexPushMessage"
         case .index:
             return "v1/index"
         case .docPage:
@@ -58,6 +61,7 @@ extension HDApiIndexManager: TargetType {
     var method: Moya.Method {
         switch self {
         case .statusInfo,
+             .pushMessage,
              .documentTypeInfo,
              .documentInfoList,
              .favoritesPage,

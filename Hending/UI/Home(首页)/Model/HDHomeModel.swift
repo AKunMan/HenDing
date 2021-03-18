@@ -8,6 +8,11 @@
 
 import UIKit
 
+class HDHomePushModel: BaseHandyModel {
+    var content = ""    //内容
+    var title = ""      //标题
+}
+
 class HDHomeModel: BaseHandyModel {
     var advertisementList = [HDAdvertisementModel]()    //广告数据
     var buttons = [HDHomeButtonModel]()                 //首页按钮

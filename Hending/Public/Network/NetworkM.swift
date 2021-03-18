@@ -85,7 +85,7 @@ class NetworkM: NSObject {
 
 extension NetworkM{
     func verifyRes(_ res:[String:Any],_ isShow:Bool) -> [String:Any] {
-        if FS(res["code"]).toInt() != 200{
+        if FS(res["code"]).toInt() != 200 && FS(res["code"]).toInt() != 9999{
             let message = FS(res["message"]).count > 0 ? FS(res["message"]):FS(res["msg"])
             let msg = CommMethod.getErrorTips(errorCode: FS(res["code"]), error: message)
             self.loadState.onNext(ZQStateInfo(errorCode: 2, msg:msg, isShowLoading: isShow))

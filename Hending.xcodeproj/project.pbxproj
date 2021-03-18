@@ -33,6 +33,8 @@
 		06AA98652591D86A0076200C /* ZSPostSendCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AA98632591D8690076200C /* ZSPostSendCommentView.swift */; };
 		06AA98662591D86A0076200C /* ZSPostSendCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06AA98642591D86A0076200C /* ZSPostSendCommentView.xib */; };
 		06B5891D2603272B00B6064A /* HDInspectionSubmitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B5891C2603272B00B6064A /* HDInspectionSubmitVC.swift */; };
+		06B589242603499700B6064A /* HDPushMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B589232603499700B6064A /* HDPushMessageView.swift */; };
+		06B5892C260349A700B6064A /* HDPushMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B5892B260349A700B6064A /* HDPushMessageView.xib */; };
 		06E4DDCF2511AAB900B50793 /* HDWorkRemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E4DDCD2511AAB900B50793 /* HDWorkRemindCell.swift */; };
 		06E4DDD02511AAB900B50793 /* HDWorkRemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E4DDCE2511AAB900B50793 /* HDWorkRemindCell.xib */; };
 		06E4DDD22511EAC900B50793 /* HDTaskFiledVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E4DDD12511EAC900B50793 /* HDTaskFiledVC.swift */; };
@@ -401,6 +403,8 @@
 		06AA98632591D8690076200C /* ZSPostSendCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSPostSendCommentView.swift; sourceTree = "<group>"; };
 		06AA98642591D86A0076200C /* ZSPostSendCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSPostSendCommentView.xib; sourceTree = "<group>"; };
 		06B5891C2603272B00B6064A /* HDInspectionSubmitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDInspectionSubmitVC.swift; sourceTree = "<group>"; };
+		06B589232603499700B6064A /* HDPushMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDPushMessageView.swift; sourceTree = "<group>"; };
+		06B5892B260349A700B6064A /* HDPushMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDPushMessageView.xib; sourceTree = "<group>"; };
 		06E4DDCD2511AAB900B50793 /* HDWorkRemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDWorkRemindCell.swift; sourceTree = "<group>"; };
 		06E4DDCE2511AAB900B50793 /* HDWorkRemindCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDWorkRemindCell.xib; sourceTree = "<group>"; };
 		06E4DDD12511EAC900B50793 /* HDTaskFiledVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDTaskFiledVC.swift; sourceTree = "<group>"; };
@@ -807,6 +811,15 @@
 				068C808A251AE5A90041BA51 /* HDTaskDetailDeleteCell.xib */,
 			);
 			path = "支撑文件";
+			sourceTree = "<group>";
+		};
+		06B589222603490300B6064A /* 系统消息 */ = {
+			isa = PBXGroup;
+			children = (
+				06B589232603499700B6064A /* HDPushMessageView.swift */,
+				06B5892B260349A700B6064A /* HDPushMessageView.xib */,
+			);
+			path = "系统消息";
 			sourceTree = "<group>";
 		};
 		06FFD22E2510BE4900845F60 /* 档案室 */ = {
@@ -1728,6 +1741,7 @@
 		33B85A3824AB93FF00DBE37B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06B589222603490300B6064A /* 系统消息 */,
 				33D8BB3024E4268500842D1C /* 免责声明 */,
 				33A679D624B473F8005E890E /* 编辑弹框 */,
 				33C670AE24AF14AB0001A706 /* Share(分享) */,
@@ -2266,6 +2280,7 @@
 				33B58E6F247BAC0F001E8C9E /* HDHome.storyboard in Resources */,
 				33A679DA24B4740A005E890E /* MCEditAlertView.xib in Resources */,
 				335FE482247E791A002F28D3 /* HDHelp.storyboard in Resources */,
+				06B5892C260349A700B6064A /* HDPushMessageView.xib in Resources */,
 				06EC791724D26C9C009EEF33 /* HDSetSubmitCell.xib in Resources */,
 				33541286248525CC00FD4BCC /* HDMessageHeadView.xib in Resources */,
 				33C670AD24AF00E50001A706 /* hd_pord.plist in Resources */,
@@ -2446,6 +2461,7 @@
 				33D70366248642E30047BAE2 /* HDSystemMessageCell.swift in Sources */,
 				33FCCE7D247CB639006B7EE3 /* HDLoginHeadCell.swift in Sources */,
 				33DF9510248F6807000D3224 /* BaseModelCtrl.swift in Sources */,
+				06B589242603499700B6064A /* HDPushMessageView.swift in Sources */,
 				3331E62F249761780095D0D7 /* HDNewsM.swift in Sources */,
 				3306B1DB248B257A00DA3E62 /* HDApiAuthManager.swift in Sources */,
 				33BFDC3524935B5F002A488A /* HDStatusDefine.swift in Sources */,

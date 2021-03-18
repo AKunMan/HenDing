@@ -54,4 +54,25 @@ class MCPageLoadManager: NSObject {
         }
         window.addSubview(guidanceView)
     }
+    
+    // 初始化引导页
+    class func initPushMessage(title:String,
+                               content:String) {
+        let guidanceView = HDPushMessageView.nib()
+        guidanceView.loadData(title: title,
+                              content: content)
+        guidanceView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
+        var window = UIApplication.shared.windows[0]
+        //是否为当前显示的window
+        if window.windowLevel != UIWindow.Level.normal{
+            let windows = UIApplication.shared.windows
+            for  windowTemp in windows{
+                if windowTemp.windowLevel == UIWindow.Level.normal{
+                    window = windowTemp
+                    break
+                }
+            }
+        }
+        window.addSubview(guidanceView)
+    }
 }

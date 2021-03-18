@@ -23,18 +23,15 @@ class HDHomeVC: BaseNormalListVC {
     @IBOutlet weak var headerView: UIView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-//        if firstIn {
-//            push("HDPhoneLoginVC", sb: "Login",animated:false)
-//            firstIn = false
-//            return
-//        }
+        navigationController?.setNavigationBarHidden(true,
+                                                     animated: false)
         if token != UserManager.getToken(){
             token = UserManager.getToken()
             tableRefresh()
         }
         if UserManager.isLogin() {
             MCPageLoadManager.initMianze()
+            getPushMessage()
         }
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -234,6 +231,24 @@ extension HDHomeVC : UITableViewDelegate {
 
 //MARK: 网络请求
 extension HDHomeVC{
+    
+    func getPushMessage() {
+        if !firstIn {
+            return
+        }
+        networkM.requestIndex(.pushMessage).subscribe(onNext: { [unowned self] (res) in
+            let data = DataModeCtrl<HDHomePushModel>.deserialize(from: res)!
+            if data.data != nil {
+                self.firstIn = false
+                let model = data.data!
+                let title = FS(model.title)
+                let content = FS(model.content)
+                MCPageLoadManager.initPushMessage(title:title,
+                                                  content:content)
+            }
+        }).disposed(by: disposeBag)
+    }
+    
     func getHomeData() {
         networkM.requestIndex(.index).subscribe(onNext: { [unowned self] (res) in
             let data = DataModeCtrl<HDHomeModel>.deserialize(from: res)!
