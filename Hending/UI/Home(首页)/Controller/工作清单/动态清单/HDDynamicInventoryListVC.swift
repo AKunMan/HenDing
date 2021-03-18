@@ -75,7 +75,6 @@ extension HDDynamicInventoryListVC{
     }
     
     func reportClick(_ model:HDInspectionModel) {
-//        let vc = HDProblemReportVC()
         let vc = push("HDProblemReportVC", sb: "HDHelp") as! HDProblemReportVC
         vc.report = model
     }
@@ -83,15 +82,8 @@ extension HDDynamicInventoryListVC{
         if model.inspectionStatus == "1" {
             return
         }
-        showAlertTips(title: nil,
-                      msg: "你确定完成此项工作吗？",
-                      sure: "确定",
-                      cancel: "关闭") {[unowned self] (tag) in
-            print("\(tag)")
-            if tag == 1 {
-                self.donePost(model)
-            }
-        }
+        let vc = push("HDInspectionSubmitVC", sb: "HDHelp") as! HDInspectionSubmitVC
+        vc.inspectionId = model.inspectionId
     }
     
     func donePost(_ model:HDInspectionModel)  {

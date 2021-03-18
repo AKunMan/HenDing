@@ -32,6 +32,7 @@
 		06AA985F2591CC770076200C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AA985E2591CC770076200C /* AVFoundation.framework */; };
 		06AA98652591D86A0076200C /* ZSPostSendCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AA98632591D8690076200C /* ZSPostSendCommentView.swift */; };
 		06AA98662591D86A0076200C /* ZSPostSendCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06AA98642591D86A0076200C /* ZSPostSendCommentView.xib */; };
+		06B5891D2603272B00B6064A /* HDInspectionSubmitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B5891C2603272B00B6064A /* HDInspectionSubmitVC.swift */; };
 		06E4DDCF2511AAB900B50793 /* HDWorkRemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E4DDCD2511AAB900B50793 /* HDWorkRemindCell.swift */; };
 		06E4DDD02511AAB900B50793 /* HDWorkRemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E4DDCE2511AAB900B50793 /* HDWorkRemindCell.xib */; };
 		06E4DDD22511EAC900B50793 /* HDTaskFiledVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E4DDD12511EAC900B50793 /* HDTaskFiledVC.swift */; };
@@ -399,6 +400,7 @@
 		06AA985E2591CC770076200C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		06AA98632591D8690076200C /* ZSPostSendCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSPostSendCommentView.swift; sourceTree = "<group>"; };
 		06AA98642591D86A0076200C /* ZSPostSendCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSPostSendCommentView.xib; sourceTree = "<group>"; };
+		06B5891C2603272B00B6064A /* HDInspectionSubmitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDInspectionSubmitVC.swift; sourceTree = "<group>"; };
 		06E4DDCD2511AAB900B50793 /* HDWorkRemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDWorkRemindCell.swift; sourceTree = "<group>"; };
 		06E4DDCE2511AAB900B50793 /* HDWorkRemindCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDWorkRemindCell.xib; sourceTree = "<group>"; };
 		06E4DDD12511EAC900B50793 /* HDTaskFiledVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDTaskFiledVC.swift; sourceTree = "<group>"; };
@@ -1297,6 +1299,7 @@
 				335FE485247E79D3002F28D3 /* HDOperationListVC.swift */,
 				3392ADF4249C63CE006762B9 /* HDAdviseVC.swift */,
 				0626246F2601E4C400967A07 /* HDProblemReportVC.swift */,
+				06B5891C2603272B00B6064A /* HDInspectionSubmitVC.swift */,
 			);
 			path = "帮助";
 			sourceTree = "<group>";
@@ -2449,6 +2452,7 @@
 				33FCCE8D247CCEA3006B7EE3 /* NSDateFormatter+Category.m in Sources */,
 				06EC791624D26C9C009EEF33 /* HDSetSubmitCell.swift in Sources */,
 				33FCCE86247CCE65006B7EE3 /* Date+MCExtension.swift in Sources */,
+				06B5891D2603272B00B6064A /* HDInspectionSubmitVC.swift in Sources */,
 				33333B9724878C6E0097CB72 /* HDTaskDetailVC.swift in Sources */,
 				33D7036B248646350047BAE2 /* HDSystemMessageM.swift in Sources */,
 				33B58EF6247BF0AF001E8C9E /* UIViewController+MCExtension.swift in Sources */,

@@ -199,9 +199,11 @@ extension HDBaseEditVC{
                 let currentM = model.dataArray[index]  as! ChooseModel
                 if currentM.judge{
                     currentM.name = lUrl
+                    currentM.content = self.fileName
                     currentM.data = url
                 }else{
                     let lModel = ChooseModel(name:lUrl,
+                                             content: self.fileName,
                                              type:"video",
                                              judge: true,
                                              data: url)
@@ -229,9 +231,11 @@ extension HDBaseEditVC{
                 let currentM = model.dataArray[index]  as! ChooseModel
                 if currentM.judge{
                     currentM.name = url
+                    currentM.content = self.fileName
                     currentM.data = img
                 }else{
                     let lModel = ChooseModel(name:url,
+                                             content: self.fileName,
                                              judge: true,
                                              data: img)
                     if model.judge{

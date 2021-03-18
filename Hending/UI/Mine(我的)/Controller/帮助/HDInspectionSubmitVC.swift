@@ -1,71 +1,69 @@
 //
-//  HDProblemReportVC.swift
+//  HDInspectionSubmitVC.swift
 //  Hending
 //
-//  Created by mrkevin on 2021/3/17.
+//  Created by mrkevin on 2021/3/18.
 //  Copyright © 2021 sky. All rights reserved.
 //
 
 import UIKit
 
-class ProblemReportModel: BaseHandyModel {
-    var reportInspectionId = ""
-    var reportFiles = [ProblemReportIconModel]()
-    var reportRemark = ""
+class InspectionModel: BaseHandyModel {
+    var id = ""
+    var files = [ProblemReportIconModel]()
 }
 
-class ProblemReportIconModel: BaseHandyModel {
-    var fileName = ""
-    var fileType = ""
-    var fileUrl = ""
-}
 
-class HDProblemReportVC: HDBaseEditVC {
+class HDInspectionSubmitVC: HDBaseEditVC {
 
-    var report = HDInspectionModel()
-    
+    var inspectionId = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        showNavTitle("问题上报")
+        showNavTitle("执行")
     }
+    
 
     override func loadData() {
-        dataArray = HDAdviseM.getReportArray()
+        dataArray = HDAdviseM.getInspectionArray()
         reloadDataArray()
     }
-}
 
-extension HDProblemReportVC{
+//    showAlertTips(title: nil,
+//                  msg: "你确定完成此项工作吗？",
+//                  sure: "确定",
+//                  cancel: "关闭") {[unowned self] (tag) in
+//        print("\(tag)")
+//        if tag == 1 {
+//            self.donePost(model)
+//        }
+//    }
     override func submit() {
         resignTF()
         submitData()
     }
+    
     override func postData() {
-        let upReport = ProblemReportModel()
         var reportFiles = [ProblemReportIconModel]()
-        let picM = dataArray[7]
+        let picM = dataArray[3]
         reportFiles = getMultipleStr(picM.dataArray)
-        let vidoM = dataArray[11]
-        reportFiles += getMultipleStr(vidoM.dataArray,
-                                      type: "video")
-        
-        upReport.reportRemark = FS(paraData["reportRemark"])
-        upReport.reportFiles = reportFiles
-        upReport.reportInspectionId = report.inspectionId
         
         if reportFiles.count == 0 {
-            HUDTools.showProgressHUD(text: "请上传图片或视频")
+            HUDTools.showProgressHUD(text: "请上传图片")
             return
         }
+        paraData["id"] = inspectionId
+        paraData["files"] = reportFiles.toJSON()
         
-        var para = [String:Any]()
-        para = upReport.toJSON()!
-        
-        networkM.requestPublic(.questionReport(para)).subscribe(onNext: { [unowned self] (res) in
+        networkM.requestPublic(.companyInspectionSubmit(paraData)).subscribe(onNext: { [unowned self] (res) in
             if FS(res["code"]) == "200"{
                 self.pop()
             }
         }).disposed(by: disposeBag)
+//        networkM.requestCompany(.companyInspectionSubmit(paraData)).subscribe(onNext: { [unowned self] (res) in
+//            if FS(res["code"]) == "200"{
+//                self.pop()
+//            }
+//        }).disposed(by: disposeBag)
     }
     
     func getMultipleStr(_ dataArray:Array<Any>,

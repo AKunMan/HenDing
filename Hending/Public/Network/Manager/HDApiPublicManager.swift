@@ -15,13 +15,23 @@ enum HDApiPublicManager{
     
     case adviseFeedback([String : Any]) //反馈意见
     case questionReport([String : Any]) //问题上报
+    case companyInspectionSubmit([String : Any]) //提交任务
 }
 
 extension HDApiPublicManager: TargetType {
     var baseURL: URL {
+        switch self {
+        case .companyInspectionSubmit(let pDic):
+            return URL(string: getUrl(FS(pDic["id"])))!
+        default:
+            break
+        }
         return URL(string: URL_ADDRESS)!
     }
     
+    func getUrl(_ id:String) -> String {
+        return "\(URL_ADDRESS)/v1/companyInspection/submit?id=\(FS(id))"
+    }
     var path: String {
         switch self {
         case .deviceRegister:
@@ -34,6 +44,9 @@ extension HDApiPublicManager: TargetType {
             return "v1/adviseFeedback/save"
         case .questionReport:
             return "v1/companyQuestionReport/add"
+        case .companyInspectionSubmit:
+//            return "v1/companyInspection/submit?id=\(FS(pDic["id"]))"
+            return ""
         }
     }
     
@@ -55,6 +68,9 @@ extension HDApiPublicManager: TargetType {
                 params[k] = v
             }
             break
+        case .companyInspectionSubmit(let pDic):
+            let files = pDic["files"]
+            return .requestData(jsonToData(jsonDic: files as Any)!)
         case .adviseFeedback(let pDic),
              .questionReport(let pDic):
             return .requestData(jsonToData(jsonDic: pDic)!)
@@ -70,6 +86,11 @@ extension HDApiPublicManager: TargetType {
                     "token":UserManager.getToken(),
                     "Content-Type":"application/json; charset=utf-8",
                     "apiv":"1.1"]
+        case .companyInspectionSubmit:
+            return ["User-Agent":"iphone",
+                    "token":UserManager.getToken(),
+                    "Content-Type":"application/json; charset=utf-8",
+                    "apiv":"1.1"]
         default:
             break
         }
@@ -78,7 +99,7 @@ extension HDApiPublicManager: TargetType {
 }
 
 extension HDApiPublicManager{
-    private func jsonToData(jsonDic:Dictionary<String, Any>) -> Data? {
+    private func jsonToData(jsonDic:Any) -> Data? {
         if (!JSONSerialization.isValidJSONObject(jsonDic)) {
             print("is not a valid json object")
             return nil

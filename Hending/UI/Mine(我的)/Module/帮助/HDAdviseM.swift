@@ -78,4 +78,21 @@ class HDAdviseM: BaseEditM {
                                    name: "上报"))
         return array
     }
+    
+    class func getInspectionArray() -> [BaseEditModel] {
+        var array = [BaseEditModel]()
+        array.append(getSpace(20))
+        array.append(BaseEditModel(type:.TitleType,
+                                   name: "上传图片"))
+        array.append(getSpace(10))
+        let picM = BaseEditModel(type: .UploadType,
+                                 judge: true,
+                                 maxLength: 5)
+        picM.dataArray = [ChooseModel()]
+        array.append(picM)
+        array.append(getSpace(20))
+        array.append(BaseEditModel(type:.SubmitType,
+                                   name: "确定"))
+        return array
+    }
 }
