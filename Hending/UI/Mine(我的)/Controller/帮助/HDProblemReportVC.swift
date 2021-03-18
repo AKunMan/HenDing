@@ -16,7 +16,7 @@ class ProblemReportModel: BaseHandyModel {
 
 class ProblemReportIconModel: BaseHandyModel {
     var fileName = ""
-    var fileType = "image"
+    var fileType = ""
     var fileUrl = ""
 }
 

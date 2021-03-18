@@ -71,7 +71,7 @@ class HDAdviseM: BaseEditM {
         let vidoM = BaseEditModel(type: .UploadType,
                                   judge: true,
                                   maxLength: 1)
-        vidoM.dataArray = [ChooseModel()]
+        vidoM.dataArray = [ChooseModel(type:"video")]
         array.append(vidoM)
         array.append(getSpace(20))
         array.append(BaseEditModel(type:.SubmitType,

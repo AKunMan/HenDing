@@ -34,6 +34,54 @@ class ZQSystemCamera:NSObject,UINavigationControllerDelegate {
         }
     }
     
+    /// 视频
+    func showVideoAlert(){
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let action1 = UIAlertAction(title: "录制", style: .default) { [weak self] (action) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera){
+                if isAuthVideo{
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.allowsEditing = true;
+                    imagePicker.sourceType = .camera
+                    imagePicker.mediaTypes = ["public.movie"]
+                    self?.vcSelf?.present(imagePicker, animated: true, completion: nil)
+                }else{
+                    self?.vcSelf?.showTip("请到设置->开启相机权限")
+                }
+                
+            }else{
+                self?.vcSelf?.showTip("设备不支持拍照")
+            }
+        }
+        
+        let action2 = UIAlertAction(title: "从相册选择", style: .default) { [weak self] (action) in
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.mediaTypes = ["public.movie"]
+            self?.vcSelf?.present(imagePicker, animated: true, completion: nil)
+        }
+        
+        let action3 = UIAlertAction(title: "取消", style: .cancel) { (_) in
+        }
+        
+        action1.setValue(UIColor(hex:"888888"), forKey: "_titleTextColor")
+        action2.setValue(UIColor(hex:"888888"), forKey: "_titleTextColor")
+        action3.setValue(UIColor(hex:"888888"), forKey: "_titleTextColor")
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        alert.addAction(action3)
+        
+        DispatchQueue.main.async {
+            self.vcSelf?.present(alert, animated: true, completion: nil)
+        }
+    }
+    ///
     /// 拍照和相册
     func showAlert(){
         

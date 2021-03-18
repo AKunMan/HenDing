@@ -10,30 +10,54 @@ import UIKit
 
 class BaseUploadCoCell: BaseCoCell {
 
-    var addBlock: VoidBlock?
-    var deleteBlock: VoidBlock?
+    
+    
     @IBOutlet weak var dataPic: UIImageView!
     @IBOutlet weak var deletePic: UIImageView!
     @IBOutlet weak var deleteBtn: UIButton!
     
+    var addBlock: VoidBlock?
+    var videoBlock:VoidBlock?
     @IBAction func addClick() {
-        if self.addBlock != nil {
-            self.addBlock!()
+        if data.type == "image" {
+            addBlock?()
+            return
         }
-    }
-    @IBAction func deleteClick() {
-        if self.deleteBlock != nil {
-            self.deleteBlock!()
-        }
+        
+        videoBlock?()
     }
     
+    var deleteBlock: VoidBlock?
+    @IBAction func deleteClick() {
+        deleteBlock?()
+    }
+    
+    var data = ChooseModel()
     func loadData(_ model:ChooseModel){
+        data = model
         deleteBtn.isHidden = !model.judge
         deletePic.isHidden = !model.judge
         if FS(model.name).count > 0{
-            dataPic.image = (model.data as! UIImage)
+            if model.type == "image" {
+                dataPic.image = (model.data as! UIImage)
+            }else{
+                print("mp4----\(FS(model.name))")
+                dataPic.image = getVideoCurrentImage(second: 1, url: model.data as! NSURL)
+            }
         }else{
             dataPic.image = nil
         }
+    }
+    
+    func getVideoCurrentImage(second:Double,url:NSURL) -> UIImage {
+        let avAsset = AVAsset(url: url as URL)
+        let generator = AVAssetImageGenerator(asset: avAsset)
+        generator.appliesPreferredTrackTransform = true
+        let time = CMTimeMakeWithSeconds(second, preferredTimescale: 600)
+        var actualTime:CMTime = CMTimeMake(value: 0,timescale: 0)
+        let imageRef:CGImage = try! generator.copyCGImage(at: time, actualTime: &actualTime)
+        let currentImage = UIImage(cgImage: imageRef)
+        
+        return currentImage
     }
 }

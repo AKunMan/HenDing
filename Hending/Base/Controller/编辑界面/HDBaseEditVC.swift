@@ -134,6 +134,13 @@ extension HDBaseEditVC{
             self.fileName = "\(Date().getTimeStamp()).png"
             self.picCellClick(img,model,index)
         }
+        cell.videoBlock = {(_ url:NSURL,
+                            _ index:Int) -> Void in
+//            self.fileName = "\(Date().getTimeStamp()).png"
+//            self.picCellClick(img,model,index)
+            self.fileName = "\(Date().getTimeStamp()).mp4"
+            self.videoCellClick(url, model, index)
+        }
         cell.delBlock = {(_ index:Int) -> Void in
             model.dataArray.remove(at: index)
             if model.dataArray.count == 0{
@@ -183,6 +190,36 @@ extension HDBaseEditVC{
         
     }
     
+    func videoCellClick(_ url:NSURL,_ model:BaseEditModel,_ index:Int){
+        let data = NSData(contentsOf: url as URL)
+        uploadImge(data! as Data) { [unowned self] (urls) in
+            HUDTools.showProgressHUD(text: "视频上传成功")
+            if urls.count > 0{
+                let lUrl = urls[0]
+                let currentM = model.dataArray[index]  as! ChooseModel
+                if currentM.judge{
+                    currentM.name = lUrl
+                    currentM.data = url
+                }else{
+                    let lModel = ChooseModel(name:lUrl,
+                                             type:"video",
+                                             judge: true,
+                                             data: url)
+                    if model.judge{
+                        model.dataArray.insert(lModel, at: index)
+                        if index == model.maxLength - 1 {
+                            model.dataArray.remove(at: model.maxLength)
+                        }
+                    }else{
+                        model.dataArray = [lModel]
+                    }
+                }
+            }
+            DispatchQueue.main.async {
+                self.refreshTableView.reloadData()
+            }
+        }
+    }
     
     func picCellClick(_ img:UIImage,_ model:BaseEditModel,_ index:Int){
         let data = img.imageToData()

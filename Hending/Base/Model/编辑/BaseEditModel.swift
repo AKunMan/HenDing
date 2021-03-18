@@ -111,17 +111,20 @@ class BaseEditModel: BaseModel {
 }
 
 class ChooseModel: NSObject {
-    var name:String = ""
-    var content:String = ""
-    var judge:Bool = false
+    var name = ""
+    var content = ""
+    var type = "image"
+    var judge = false
     var data:Any!
     
     init(name:String = "",
          content:String = "",
+         type:String = "image",
          judge:Bool = false,
          data:Any = NSObject()) {
         self.name = name
         self.content = content
+        self.type = type
         self.judge = judge
         self.data = data
     }

@@ -19,6 +19,7 @@ class HDFileModel: BaseHandyModel {
 
 class BaseUploadCell: BaseCell {
     var addBlock: ((_ img: UIImage,_ index:Int) -> ())?
+    var videoBlock: ((_ url: NSURL,_ index:Int) -> ())?
 //    var addBlock: IndexBlock?
     var delBlock: IndexBlock?
     let ITEM_HEIGHT:CGFloat = 86
@@ -84,6 +85,9 @@ extension BaseUploadCell{
         cell.addBlock = {[unowned self] in
             self.addClick(ip)
         }
+        cell.videoBlock = {[unowned self] in
+            self.videoClick(ip)
+        }
         cell.deleteBlock = {() -> Void in
             if self.delBlock != nil {
                 self.delBlock!(ip.row)
@@ -97,14 +101,30 @@ extension BaseUploadCell{
             self.camera = ZQSystemCamera()
             self.camera.showAlert()
             self.camera.finishBlock = {  [unowned self] (img) in
-                
                 print("图片上传")
                 self.addBlock?(img,ip.row)
             }
         }
     }
+    
+    func videoClick(_ ip:IndexPath){
+        self.currentIndex = ip.row
+        DispatchQueue.main.async {
+            self.camera = ZQSystemCamera()
+            self.camera.showVideoAlert()
+            self.camera.movieBlock = { [unowned self] (url) in
+                self.videoBlock?(url,ip.row)
+                HUDTools.showProgressHUD(text: "上传视频成功")
+            }
+        }
+    }
+}
+//视频上传
+extension BaseUploadCell{
+    
 }
 
+//图片上传
 extension BaseUploadCell{
     func getStsToken() {
         HDHttpNetwork().requestCompany(.fileAliyunStsToken).subscribe(onNext: {[unowned self] (res) in
