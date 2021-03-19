@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0609F49C2604867E00D4448B /* HDLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0609F49B2604867E00D4448B /* HDLinkVC.swift */; };
+		0609F4A1260486D500D4448B /* Link.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0609F4A0260486D500D4448B /* Link.storyboard */; };
 		061F4AF9250C6C1600E43AD3 /* HDRecordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F4AF8250C6C1600E43AD3 /* HDRecordListVC.swift */; };
 		061F4AFF250C823500E43AD3 /* HDRecordListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F4AFD250C823500E43AD3 /* HDRecordListCell.swift */; };
 		061F4B00250C823500E43AD3 /* HDRecordListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061F4AFE250C823500E43AD3 /* HDRecordListCell.xib */; };
@@ -376,6 +378,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0609F49B2604867E00D4448B /* HDLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDLinkVC.swift; sourceTree = "<group>"; };
+		0609F4A0260486D500D4448B /* Link.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Link.storyboard; sourceTree = "<group>"; };
 		061F4AF8250C6C1600E43AD3 /* HDRecordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HDRecordListVC.swift; path = "../New Group/HDRecordListVC.swift"; sourceTree = "<group>"; };
 		061F4AFD250C823500E43AD3 /* HDRecordListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDRecordListCell.swift; sourceTree = "<group>"; };
 		061F4AFE250C823500E43AD3 /* HDRecordListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDRecordListCell.xib; sourceTree = "<group>"; };
@@ -816,6 +820,8 @@
 		06B589222603490300B6064A /* 系统消息 */ = {
 			isa = PBXGroup;
 			children = (
+				0609F4A0260486D500D4448B /* Link.storyboard */,
+				0609F49B2604867E00D4448B /* HDLinkVC.swift */,
 				06B589232603499700B6064A /* HDPushMessageView.swift */,
 				06B5892B260349A700B6064A /* HDPushMessageView.xib */,
 			);
@@ -2255,6 +2261,7 @@
 				33FCCE76247CB5B8006B7EE3 /* MCSpaceCell.xib in Resources */,
 				33FCCE7E247CB639006B7EE3 /* HDLoginHeadCell.xib in Resources */,
 				33B58E7C247BB364001E8C9E /* HDMessage.storyboard in Resources */,
+				0609F4A1260486D500D4448B /* Link.storyboard in Resources */,
 				336BA9DD24A0A3C900A5CC8A /* HDEncyCoCell.xib in Resources */,
 				3392AE04249CA971006762B9 /* HDTextViewCell.xib in Resources */,
 				061F4B19250CB68A00E43AD3 /* HDTaskDetailClickCell.xib in Resources */,
@@ -2439,6 +2446,7 @@
 				33DF9515248F875D000D3224 /* HDHomeRemindCell.swift in Sources */,
 				336BA9D024A0585700A5CC8A /* HDEncyclopediaIndexVC.swift in Sources */,
 				3306B1DF248B892400DA3E62 /* NetworkM.swift in Sources */,
+				0609F49C2604867E00D4448B /* HDLinkVC.swift in Sources */,
 				33B58E78247BAD9E001E8C9E /* HDMineVC.swift in Sources */,
 				33333B8B248757E10097CB72 /* HDHomeNormalListCell.swift in Sources */,
 				061F4B0A250C9CAD00E43AD3 /* HDRecordListModel.swift in Sources */,

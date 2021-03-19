@@ -395,6 +395,9 @@ extension HDHomeVC{
         if item.type == .NormalType || item.type == .NormalPushType{
             pushNewsDetail(item.data as! HDFindModel)
         }
+//        let content = "<p style=”margin-left:0px;”>测试pdf链接：<a target=”_blank” rel=”noopener noreferrer” href=”https://beta-files.oss.hen-ding.com/1/2021/03/18/8e73306d0e913703de980058dbafd052.pdf”>https://beta-files.oss.hen-ding.com/1/2021/03/18/8e73306d0e913703de980058dbafd052.pdf</a></p><p style=”margin-left:0px;”>测试url链接：<a target=”_blank” rel=”noopener noreferrer” href=”https://files.oss.hen-ding.com/study/start.html”>https://files.oss.hen-ding.com/study/start.html</a></p>"
+//        MCPageLoadManager.initPushMessage(title:"链接",
+//                                          content:content)
     }
     func verifyPush(_ home:HDHomeModel) {
         if home.remindMsg.count > 0 {

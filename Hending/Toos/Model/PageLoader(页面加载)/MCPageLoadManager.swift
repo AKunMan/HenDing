@@ -61,18 +61,12 @@ class MCPageLoadManager: NSObject {
         let guidanceView = HDPushMessageView.nib()
         guidanceView.loadData(title: title,
                               content: content)
-        guidanceView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
-        var window = UIApplication.shared.windows[0]
-        //是否为当前显示的window
-        if window.windowLevel != UIWindow.Level.normal{
-            let windows = UIApplication.shared.windows
-            for  windowTemp in windows{
-                if windowTemp.windowLevel == UIWindow.Level.normal{
-                    window = windowTemp
-                    break
-                }
-            }
+        PRTools.getTopVC()?.view.addSubview(guidanceView)
+        guidanceView.mas_makeConstraints { (make) in
+            make?.edges.setInsets(UIEdgeInsets(top: 0,
+                                               left: 0,
+                                               bottom: 0,
+                                               right: 0))
         }
-        window.addSubview(guidanceView)
     }
 }
