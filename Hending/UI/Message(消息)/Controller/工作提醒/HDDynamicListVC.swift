@@ -42,9 +42,16 @@ extension HDDynamicListVC{
         cell.block = {[unowned self] in
             self.doneClick(item.data as! HDInspectionModel)
         }
+        cell.reportBlock = {[unowned self] in
+            self.reportClick(item.data as! HDInspectionModel)
+        }
         return cell
     }
     
+    func reportClick(_ model:HDInspectionModel) {
+        let vc = push("HDProblemReportVC", sb: "HDHelp") as! HDProblemReportVC
+        vc.report = model
+    }
     func doneClick(_ model:HDInspectionModel) {
 //        if model.inspectionStatus == "1" {
 //            return
@@ -61,15 +68,16 @@ extension HDDynamicListVC{
     }
     
     func donePost(_ model:HDInspectionModel)  {
-        
-        var para = [String:String]()
-        para["id"] = model.inspectionId
-        networkM.requestCompany(.companyInspectionSubmit(para)).subscribe(onNext: { [unowned self] (res) in
-            let data = NoDataModeCtrl.deserialize(from: res)!
-            if data.code == 200 {
-                self.tableRefresh()
-            }
-        }).disposed(by: disposeBag)
+        let vc = push("HDInspectionSubmitVC", sb: "HDHelp") as! HDInspectionSubmitVC
+        vc.inspectionId = model.inspectionId
+//        var para = [String:String]()
+//        para["id"] = model.inspectionId
+//        networkM.requestCompany(.companyInspectionSubmit(para)).subscribe(onNext: { [unowned self] (res) in
+//            let data = NoDataModeCtrl.deserialize(from: res)!
+//            if data.code == 200 {
+//                self.tableRefresh()
+//            }
+//        }).disposed(by: disposeBag)
     }
     override func tableSelcet(_ ip: IndexPath) {
         

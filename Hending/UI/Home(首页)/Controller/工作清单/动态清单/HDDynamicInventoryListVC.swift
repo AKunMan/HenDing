@@ -79,11 +79,20 @@ extension HDDynamicInventoryListVC{
         vc.report = model
     }
     func doneClick(_ model:HDInspectionModel) {
-        if model.inspectionStatus == "1" {
-            return
+//        if model.inspectionStatus == "1" {
+//            return
+//        }
+        showAlertTips(title: nil,
+                      msg: "你确定完成此项工作吗？",
+                      sure: "确定",
+                      cancel: "关闭") {[unowned self] (tag) in
+            print("\(tag)")
+            if tag == 1 {
+                let vc = self.push("HDInspectionSubmitVC", sb: "HDHelp") as! HDInspectionSubmitVC
+                vc.inspectionId = model.inspectionId
+            }
         }
-        let vc = push("HDInspectionSubmitVC", sb: "HDHelp") as! HDInspectionSubmitVC
-        vc.inspectionId = model.inspectionId
+        
     }
     
     func donePost(_ model:HDInspectionModel)  {
