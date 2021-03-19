@@ -56,7 +56,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4f-qz-mMc">
-                                            <rect key="frame" x="0.0" y="0.0" width="304" height="48"/>
+                                            <rect key="frame" x="15" y="15" width="274" height="18"/>
                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <wkWebViewConfiguration key="configuration">
                                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -66,14 +66,14 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="h4f-qz-mMc" secondAttribute="trailing" id="2Cj-Qx-tyV"/>
-                                        <constraint firstAttribute="bottom" secondItem="h4f-qz-mMc" secondAttribute="bottom" id="Eam-Gq-B1R"/>
+                                        <constraint firstAttribute="trailing" secondItem="h4f-qz-mMc" secondAttribute="trailing" constant="15" id="2Cj-Qx-tyV"/>
+                                        <constraint firstAttribute="bottom" secondItem="h4f-qz-mMc" secondAttribute="bottom" constant="15" id="Eam-Gq-B1R"/>
                                         <constraint firstAttribute="trailing" secondItem="FqS-73-kzH" secondAttribute="trailing" constant="15" id="Kio-dJ-h6c"/>
-                                        <constraint firstItem="h4f-qz-mMc" firstAttribute="top" secondItem="uag-Lw-yGb" secondAttribute="top" id="Poc-UV-oBP"/>
+                                        <constraint firstItem="h4f-qz-mMc" firstAttribute="top" secondItem="uag-Lw-yGb" secondAttribute="top" constant="15" id="Poc-UV-oBP"/>
                                         <constraint firstItem="FqS-73-kzH" firstAttribute="top" secondItem="uag-Lw-yGb" secondAttribute="top" constant="15" id="nBh-0N-Anx"/>
                                         <constraint firstAttribute="bottom" secondItem="FqS-73-kzH" secondAttribute="bottom" constant="15" id="nLP-io-Ag7"/>
                                         <constraint firstItem="FqS-73-kzH" firstAttribute="leading" secondItem="uag-Lw-yGb" secondAttribute="leading" constant="15" id="sXd-Ur-3Mq"/>
-                                        <constraint firstItem="h4f-qz-mMc" firstAttribute="leading" secondItem="uag-Lw-yGb" secondAttribute="leading" id="ve0-ua-AMa"/>
+                                        <constraint firstItem="h4f-qz-mMc" firstAttribute="leading" secondItem="uag-Lw-yGb" secondAttribute="leading" constant="15" id="ve0-ua-AMa"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
