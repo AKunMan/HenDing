@@ -17,9 +17,11 @@ class HDWarningCell: BaseCell {
     @IBOutlet weak var headView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var pic: UIImageView!
+    @IBOutlet weak var littleRedDot: UIView!
     
     func loadData(_ model:BaseListModel) {
         let remind = model.data as! HDWorkRemindModel
+        littleRedDot.isHidden = !remind.littleRedDot
         let document = remind.info
         nameLabel.text = document.infoName
         subNameLabel.text = Work_Status[document.infoWorkStatus]

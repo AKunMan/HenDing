@@ -67,12 +67,13 @@ class HDWorkRemindModel: BaseHandyModel {
     var info = HDTradeDocumentInfo()    //文档详情
     var companyWorkInfo = HDWorkModel() //任务
     var typeTreeList = [HDTypeTreeModel]()
-    
+    var littleRedDot = false
     
     init(_ info:HDTradeDocumentInfo) {
         self.info = info
         self.remindTime = info.infoRemindTime
         self.typeTreeList = info.typeTreeList
+        self.littleRedDot = info.littleRedDot
     }
     
     required init() {
@@ -113,6 +114,7 @@ class HDTradeDocumentInfo: BaseHandyModel {
     var workExecuteCycle = ""
     var workCycle = ""
     var typeTreeList = [HDTypeTreeModel]()
+    var littleRedDot = false
 }
 
 class HDTradeDocumentInfoTags: BaseHandyModel {

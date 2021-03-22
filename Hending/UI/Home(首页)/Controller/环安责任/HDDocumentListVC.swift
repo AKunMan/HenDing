@@ -37,6 +37,11 @@ extension HDDocumentListVC{
         }else{
             pushTaskAudit(remind)
         }
+        var para = [String:String]()
+        para["infoId"] = remind.info.infoId
+        para["readType"] = "trade"
+        networkM.requestCompany(.littleRedDotRead(para)).subscribe(onNext: { (res) in
+        }).disposed(by: disposeBag)
     }
     override func getNormalCell(_ item:BaseListModel,_ ip:IndexPath) -> UITableViewCell {
         let cell = refreshTableView.dequeueReusableCell(withIdentifier: "HDWarningCell") as! HDWarningCell

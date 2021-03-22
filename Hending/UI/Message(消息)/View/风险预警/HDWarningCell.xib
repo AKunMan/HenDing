@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-PB-Loi">
-                                <rect key="frame" x="15" y="15" width="215" height="18"/>
+                                <rect key="frame" x="15" y="15" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.12941176469999999" blue="0.20392156859999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
@@ -31,6 +31,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPv-xU-XF0">
+                                <rect key="frame" x="52.5" y="13" width="4" height="4"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="4" id="K8d-ze-nGg"/>
+                                    <constraint firstAttribute="height" constant="4" id="t13-6P-4R9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-sp-eM4">
                                 <rect key="frame" x="15" y="43" width="31" height="12"/>
                                 <constraints>
@@ -82,11 +95,13 @@
                         <constraints>
                             <constraint firstItem="enI-lk-9TF" firstAttribute="centerY" secondItem="a9p-3h-96f" secondAttribute="centerY" id="7MC-Ay-cZJ"/>
                             <constraint firstItem="a9p-3h-96f" firstAttribute="centerY" secondItem="JFE-aX-OJQ" secondAttribute="centerY" id="98B-he-xdB"/>
+                            <constraint firstItem="pPv-xU-XF0" firstAttribute="top" secondItem="HVo-PB-Loi" secondAttribute="top" constant="-2" id="DJO-9k-tiW"/>
                             <constraint firstItem="dvT-sp-eM4" firstAttribute="leading" secondItem="HVo-PB-Loi" secondAttribute="leading" id="E3P-ii-KCI"/>
                             <constraint firstItem="HVo-PB-Loi" firstAttribute="top" secondItem="7e9-Dv-ETG" secondAttribute="top" constant="15" id="EKw-83-d7I"/>
                             <constraint firstAttribute="trailing" secondItem="PeJ-YU-THh" secondAttribute="trailing" constant="99" id="FmL-qL-cVO"/>
-                            <constraint firstAttribute="trailing" secondItem="HVo-PB-Loi" secondAttribute="trailing" constant="90" id="OlG-bS-ovd"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HVo-PB-Loi" secondAttribute="trailing" constant="90" id="OlG-bS-ovd"/>
                             <constraint firstAttribute="bottom" secondItem="PeJ-YU-THh" secondAttribute="bottom" constant="16.5" id="VPs-1b-tzy"/>
+                            <constraint firstItem="pPv-xU-XF0" firstAttribute="trailing" secondItem="HVo-PB-Loi" secondAttribute="trailing" constant="4" id="aNv-k9-ZIU"/>
                             <constraint firstItem="JFE-aX-OJQ" firstAttribute="centerY" secondItem="7e9-Dv-ETG" secondAttribute="centerY" id="ctv-VZ-hTd"/>
                             <constraint firstItem="PeJ-YU-THh" firstAttribute="leading" secondItem="dvT-sp-eM4" secondAttribute="leading" id="cyp-M6-Tmt"/>
                             <constraint firstItem="dvT-sp-eM4" firstAttribute="top" secondItem="HVo-PB-Loi" secondAttribute="bottom" constant="10" id="eEj-fC-W5X"/>
@@ -137,6 +152,7 @@
                 <outlet property="bottomView" destination="D6Z-0y-dwH" id="qPv-yl-6oP"/>
                 <outlet property="dataLabel" destination="dvT-sp-eM4" id="nse-tR-Z3i"/>
                 <outlet property="headView" destination="fWz-uI-VoH" id="vA3-He-mpD"/>
+                <outlet property="littleRedDot" destination="pPv-xU-XF0" id="mVa-jE-sY3"/>
                 <outlet property="nameLabel" destination="HVo-PB-Loi" id="kul-NA-C1V"/>
                 <outlet property="pic" destination="enI-lk-9TF" id="Q33-Ed-P0I"/>
                 <outlet property="subNameLabel" destination="a9p-3h-96f" id="DDr-ai-L6g"/>

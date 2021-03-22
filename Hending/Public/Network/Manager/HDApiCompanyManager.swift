@@ -36,6 +36,8 @@ enum HDApiCompanyManager{
     case planList([String : Any])               //计划清单
     case inspectionList([String : Any])               //动态清单
     case tdTradeDocumentTagClassifyList([String : Any])               //查询列表
+    case littleRedDotRead([String : Any])       //小红点读取状态
+    case readMessage([String : Any])       //读取消息
 }
 
 extension HDApiCompanyManager: TargetType {
@@ -100,6 +102,10 @@ extension HDApiCompanyManager: TargetType {
             return "v1/companyInspectionRemind/list"
         case .companyInspectionSubmit:
             return "v1/companyInspection/submit"
+        case .littleRedDotRead:
+            return "v1/littleRedDot/read"
+        case .readMessage:
+            return "v1/companyNews/read/message"
         }
     }
     
@@ -111,7 +117,8 @@ extension HDApiCompanyManager: TargetType {
              .authUrl,
              .batchExamine,
              .documentLeavingMessageAdd,
-             .companyInspectionSubmit:
+             .companyInspectionSubmit,
+             .readMessage:
             return .post
         default:
             return .get
@@ -144,7 +151,9 @@ extension HDApiCompanyManager: TargetType {
              .companyWorkHistory(let pDic),
              .documentLeavingMessageAdd(let pDic),
              .companyInspectionSubmit(let pDic),
-             .companyInspectionRemindList(let pDic):
+             .companyInspectionRemindList(let pDic),
+             .littleRedDotRead(let pDic),
+             .readMessage(let pDic):
             for (k,v) in pDic{
                 params[k] = v
             }

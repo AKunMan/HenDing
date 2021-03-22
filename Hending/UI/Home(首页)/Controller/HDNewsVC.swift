@@ -98,6 +98,12 @@ extension HDNewsVC{
         let vc = push("HDNewsDetailVC", sb: "HDHome") as! HDNewsDetailVC
         vc.navTitle = model.typeInfo.typeName
         vc.infoId = model.infoId
+        
+        var para = [String:String]()
+        para["infoId"] = model.infoId
+        para["readType"] = "document"
+        networkM.requestCompany(.littleRedDotRead(para)).subscribe(onNext: { (res) in
+        }).disposed(by: disposeBag)
     }
     func getData()  {
         var para = [String:String]()
