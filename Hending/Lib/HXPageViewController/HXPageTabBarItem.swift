@@ -113,16 +113,27 @@ class HXPageTabBarItem: UICollectionViewCell {
     }()
     
     private lazy var markLabel: UILabel = {
-        let lable = UILabel(frame: CGRect(x: self.bounds.width - 5,
-                                          y: 10,
-                                          width: 20,
-                                          height: 12))
+//        let lable = UILabel()
+//        lable.textAlignment = .center
+//        lable.textColor = .white
+//        lable.backgroundColor = .red
+//        lable.font = kFontOfSize(size: 9)
+//        lable.cornerRadius = 6
+//        return lable
+        let lable = UILabel()
         lable.textAlignment = .center
         lable.textColor = .white
         lable.backgroundColor = .red
         lable.font = kFontOfSize(size: 9)
         lable.cornerRadius = 6
         return lable
+    }()
+    
+    private lazy var littleRed: UIView = {
+        let littleRed = UIView()
+        littleRed.backgroundColor = .red
+        littleRed.cornerRadius = 2
+        return littleRed
     }()
     
     private lazy var bgImageView: UIImageView = {
@@ -152,7 +163,21 @@ class HXPageTabBarItem: UICollectionViewCell {
     private func setup() {
         contentView.insertSubview(bgView, at: 0)
         contentView.addSubview(titleLabel)
+        contentView.addSubview(littleRed)
         contentView.addSubview(markLabel)
+        littleRed.mas_makeConstraints { (make) in
+            make?.trailing.offset()(8)
+            make?.top.offset()(15)
+            make?.width.offset()(4)
+            make?.height.offset()(4)
+        }
+        
+        markLabel.mas_makeConstraints { (make) in
+            make?.trailing.offset()(12)
+            make?.top.offset()(8)
+            make?.width.greaterThanOrEqualTo()(12)
+            make?.height.offset()(12)
+        }
     }
     
     override func layoutSubviews() {
@@ -213,9 +238,12 @@ class HXPageTabBarItem: UICollectionViewCell {
         }
         let title = itemModel.title == "" ? "  ":itemModel.title
         titleLabel.text = title
-        if itemModel.number == 0 {
-            markLabel.isHidden = true
-        }else{
+        littleRed.isHidden = true
+        markLabel.isHidden = true
+        if itemModel.number == -1 {
+            littleRed.isHidden = false
+        }
+        if itemModel.number > 0 {
             markLabel.isHidden = false
             markLabel.text = FS(itemModel.number)
         }

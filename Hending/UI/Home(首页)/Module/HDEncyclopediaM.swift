@@ -14,8 +14,10 @@ class HDEncyclopediaM: BaseListM {
                                       typeId: typeId)
         var dataArray = [HDWarningModel]()
         for item in array {
+            let number = item.littleRedDot ? -1:0
             dataArray.append(HDWarningModel(id:item.typeId,
-                                            title: item.typeName))
+                                            title: item.typeName,
+                                            number: number))
         }
         return dataArray
     }

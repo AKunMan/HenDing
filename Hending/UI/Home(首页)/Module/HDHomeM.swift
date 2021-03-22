@@ -63,6 +63,7 @@ extension HDHomeM{
             if item.infoIconAddress == "center" {
                 array.append(BaseListModel(type:.NormalPushType,
                                            isSelect: true,
+                                           judge: item.littleRedDot,
                                            name: item.infoTitle,
                                            subName: "@\(item.typeInfo.typeName)",
                                            content: item.infoDate,
@@ -74,6 +75,7 @@ extension HDHomeM{
                 let url = item.infoIcons.count > 0 ? item.infoIcons[0].url:""
                 array.append(BaseListModel(type:.NormalType,
                                            isSelect: true,
+                                           judge: item.littleRedDot,
                                            name: item.infoTitle,
                                            subName: "@\(item.typeInfo.typeName)",
                                            content: item.infoDate,

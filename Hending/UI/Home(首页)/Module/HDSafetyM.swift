@@ -14,8 +14,10 @@ class HDSafetyM: BaseListM {
                                             typeId: typeId)
         var dataArray = [HDWarningModel]()
         for item in array {
+            let num = item.littleRedDot ? -1:0
             dataArray.append(HDWarningModel(id:item.typeId,
-                                            title: item.typeName))
+                                            title: item.typeName,
+                                            number: num))
         }
         return dataArray
     }
@@ -40,6 +42,7 @@ class HDSafetyM: BaseListM {
         for title in array {
             dataArray.append(getSpace(10))
             dataArray.append(BaseListModel(type:.HeadType,
+                                           judge: title.littleRedDot,
                                            name: title.typeName))
             let titles = Tools.filtrateIndexList(Application.shared.typeList,
                                                  typeId: title.typeId)
@@ -47,6 +50,7 @@ class HDSafetyM: BaseListM {
                 let name = "    \(item.typeName)"
                 dataArray.append(BaseListModel(type:.NormalType,
                                                isSelect: true,
+                                               judge: item.littleRedDot,
                                                select_id: item.typeId,
                                                name: name))
                 dataArray.append(getLineSpace())

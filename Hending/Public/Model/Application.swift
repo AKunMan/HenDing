@@ -14,6 +14,8 @@ class DocumentTypeModel: BaseHandyModel {
     var typeParentId = ""       //上级ID
     var typeDescription = ""    //简介
     var typeParent = ""         //父ID
+    var littleRedDot = false    //
+    var littleRedDotCount = 0   //
 }
 
 class Application: NSObject {

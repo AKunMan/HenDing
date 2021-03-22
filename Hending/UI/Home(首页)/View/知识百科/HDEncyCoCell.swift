@@ -11,7 +11,9 @@ import UIKit
 class HDEncyCoCell: BaseCoCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var littleRed: UIView!
     func loadData(_ model:DocumentTypeModel){
-        nameLabel.text = model.typeName
+        nameLabel.text = FS(model.typeName)
+        littleRed.isHidden = !model.littleRedDot
     }
 }

@@ -50,7 +50,7 @@ class Tools: NSObject {
                            typeId:String) -> [DocumentTypeModel]{
         var array = [DocumentTypeModel]()
         for item in dataArray {
-            if item.typeParent == typeId {
+            if FS(item.typeParent) == typeId {
                 array.append(item)
             }
         }

@@ -24,6 +24,7 @@ class HDFindModel: BaseHandyModel {
     var infoLike = false                //点赞：true已点赞，false未点赞
     var infoFavorite = false            //收藏：true已收藏，false未收藏
     var infoExcerpt = ""
+    var littleRedDot = false
 }
 
 class HDIconModel: BaseHandyModel {

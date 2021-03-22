@@ -11,8 +11,10 @@ import UIKit
 class HDSafetyHeadCell: BaseCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var littleRedDot: UIView!
     func loadData(_ model:BaseListModel) {
         nameLabel.text = model.name
+        littleRedDot.isHidden = !model.judge
     }
     
 }

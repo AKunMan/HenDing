@@ -14,11 +14,13 @@ class HDHomeNormalLeftCell: BaseCell {
     @IBOutlet weak var subNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var pic: UIImageView!
+    @IBOutlet weak var littleRed: UIView!
     func loadData(_ model:BaseListModel) {
         nameLabel.text = model.name
         subNameLabel.text = model.subName
         dateLabel.text = model.content.substring(to: 10)
         pic.loadImage(model.imagName)
+        littleRed.isHidden = !model.judge
     }
     
 }

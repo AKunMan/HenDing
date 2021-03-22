@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -67,7 +68,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2Rp-Za-b0q" firstAttribute="top" secondItem="slz-rh-DV2" secondAttribute="top" id="09s-Qw-uBB"/>
                             <constraint firstItem="1La-fq-Cvx" firstAttribute="top" secondItem="2Rp-Za-b0q" secondAttribute="bottom" constant="10" id="1mv-ND-5Ca"/>
@@ -79,6 +80,19 @@
                             <constraint firstAttribute="trailing" secondItem="PBM-aA-oi3" secondAttribute="trailing" id="l2F-vW-R4I"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-uX-DAZ">
+                        <rect key="frame" x="300" y="24" width="4" height="4"/>
+                        <color key="backgroundColor" red="0.89019607840000003" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="4" id="D08-1G-kpe"/>
+                            <constraint firstAttribute="height" constant="4" id="t9X-CZ-kJW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="TXd-eg-9WB" secondAttribute="bottom" constant="16" id="5i5-wa-p5Y"/>
@@ -86,17 +100,25 @@
                     <constraint firstItem="slz-rh-DV2" firstAttribute="leading" secondItem="TXd-eg-9WB" secondAttribute="trailing" constant="10" id="8rM-NJ-BbF"/>
                     <constraint firstItem="TXd-eg-9WB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="97t-rK-fp3"/>
                     <constraint firstItem="slz-rh-DV2" firstAttribute="centerY" secondItem="TXd-eg-9WB" secondAttribute="centerY" id="9Ln-XA-Ntc"/>
+                    <constraint firstItem="lMX-uX-DAZ" firstAttribute="trailing" secondItem="slz-rh-DV2" secondAttribute="trailing" constant="4" id="EE1-Ds-oci"/>
                     <constraint firstItem="TXd-eg-9WB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="iU1-mC-Zlx"/>
+                    <constraint firstItem="lMX-uX-DAZ" firstAttribute="top" secondItem="slz-rh-DV2" secondAttribute="top" constant="-4" id="sTY-75-dRv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="PBM-aA-oi3" id="k5D-8a-mlP"/>
+                <outlet property="littleRed" destination="lMX-uX-DAZ" id="ksi-fs-D40"/>
                 <outlet property="nameLabel" destination="2Rp-Za-b0q" id="qae-MX-hHk"/>
                 <outlet property="pic" destination="TXd-eg-9WB" id="MGY-K1-amu"/>
                 <outlet property="subNameLabel" destination="1La-fq-Cvx" id="Ixp-TH-KGQ"/>
             </connections>
-            <point key="canvasLocation" x="139" y="117"/>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

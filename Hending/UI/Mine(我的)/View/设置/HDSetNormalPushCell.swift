@@ -12,10 +12,11 @@ class HDSetNormalPushCell: BaseCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var subNameLabel: UILabel!
-    
+    @IBOutlet weak var littleRedDot: UIView!
     func loadData(_ model:BaseListModel) {
         nameLabel.text = model.name
         subNameLabel.text = model.subName
         subNameLabel.textColor = model.color
+        littleRedDot.isHidden = !model.judge
     }
 }
