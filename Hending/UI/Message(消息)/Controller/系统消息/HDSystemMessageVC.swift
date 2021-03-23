@@ -8,10 +8,15 @@
 
 import UIKit
 
+
 class HDSystemMessageVC: BaseNormalListVC {
 
     var message = HDMessageModel()
     var messageId = ""
+    
+    override func willLoad(){}
+    override func setRefresh(){}
+    override func tableEnd(){}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +30,21 @@ class HDSystemMessageVC: BaseNormalListVC {
             let data = DataModeCtrl<HDMessageModel>.deserialize(from: res)!
             if data.code == 200 {
                 self.message = data.data!
-                let array = HDSystemMessageM.getDataArray(self.message)
-                self.updateDataArray(array)
+//                let array = HDSystemMessageM.getDataArray(self.message)
+//                self.updateDataArray(array)
+//                self.reloadDataArray()
+                self.readMsg()
+                self.dataArray = HDSystemMessageM.getDataArray(self.message)
                 self.reloadDataArray()
             }
+        }).disposed(by: disposeBag)
+    }
+    
+    func readMsg() {
+        var para = [String:String]()
+        para["newsId"] = message.newsDataId
+        para["newsType"] = message.newsType
+        networkM.requestCompany(.readMessage(para)).subscribe(onNext: { (res) in
         }).disposed(by: disposeBag)
     }
 }

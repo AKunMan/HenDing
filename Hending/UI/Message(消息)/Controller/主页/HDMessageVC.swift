@@ -93,19 +93,16 @@ extension HDMessageVC{
     }
     func pushSystemList(_ message:HDMessageModel) {
         print("工作提醒")
+        
+        
         if message.newsFileType == "text" {
             let vc = push("HDSystemMessageVC", sb: "HDMessage") as! HDSystemMessageVC
             vc.messageId = message.newsId
-        }else{
-            let vc = push("HDNewsDetailVC", sb: "HDHome") as! HDNewsDetailVC
-            vc.navTitle = message.newsTypeName
-            vc.infoId = message.newsDataId
+            return
         }
-        var para = [String:String]()
-        para["newsId"] = message.newsDataId
-        para["newsType"] = message.newsType
-        networkM.requestCompany(.readMessage(para)).subscribe(onNext: { (res) in
-        }).disposed(by: disposeBag)
+        let vc = push("HDNewsDetailVC", sb: "HDHome") as! HDNewsDetailVC
+        vc.navTitle = message.newsTypeName
+        vc.infoId = message.newsDataId
     }
 }
 
