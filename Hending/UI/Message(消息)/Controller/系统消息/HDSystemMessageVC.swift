@@ -30,8 +30,6 @@ class HDSystemMessageVC: BaseNormalListVC {
                 self.reloadDataArray()
             }
         }).disposed(by: disposeBag)
-        
-        
     }
 }
 extension HDSystemMessageVC{

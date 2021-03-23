@@ -102,7 +102,7 @@ extension HDMessageVC{
             vc.infoId = message.newsDataId
         }
         var para = [String:String]()
-        para["newsId"] = message.newsId
+        para["newsId"] = message.newsDataId
         para["newsType"] = message.newsType
         networkM.requestCompany(.readMessage(para)).subscribe(onNext: { (res) in
         }).disposed(by: disposeBag)

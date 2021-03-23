@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0603FCF62609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603FCF52609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift */; };
 		0609F49C2604867E00D4448B /* HDLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0609F49B2604867E00D4448B /* HDLinkVC.swift */; };
 		0609F4A1260486D500D4448B /* Link.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0609F4A0260486D500D4448B /* Link.storyboard */; };
 		061F4AF9250C6C1600E43AD3 /* HDRecordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F4AF8250C6C1600E43AD3 /* HDRecordListVC.swift */; };
@@ -378,6 +379,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0603FCF52609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDSystemMessgeHtmlVC.swift; sourceTree = "<group>"; };
 		0609F49B2604867E00D4448B /* HDLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDLinkVC.swift; sourceTree = "<group>"; };
 		0609F4A0260486D500D4448B /* Link.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Link.storyboard; sourceTree = "<group>"; };
 		061F4AF8250C6C1600E43AD3 /* HDRecordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HDRecordListVC.swift; path = "../New Group/HDRecordListVC.swift"; sourceTree = "<group>"; };
@@ -1854,6 +1856,7 @@
 			isa = PBXGroup;
 			children = (
 				33D70368248645250047BAE2 /* HDSystemMessageVC.swift */,
+				0603FCF52609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift */,
 			);
 			path = "系统消息";
 			sourceTree = "<group>";
@@ -2488,6 +2491,7 @@
 				33C670B224AF14AB0001A706 /* JTShareView.swift in Sources */,
 				33B85A3B24AB948C00DBE37B /* HDAlertRejectView.swift in Sources */,
 				335232BA247F630D002F1386 /* UIImageVIew+MCExtension.swift in Sources */,
+				0603FCF62609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift in Sources */,
 				33B58DD1247B5FEC001E8C9E /* Hending.xcdatamodeld in Sources */,
 				33B58E57247B97BB001E8C9E /* BaseHandyModel.swift in Sources */,
 				33541282248516CD00FD4BCC /* HDMineHeadView.swift in Sources */,
