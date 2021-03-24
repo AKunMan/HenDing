@@ -22,7 +22,17 @@ class HDLinkVC: BaseViewController {
         createWebview(url)
     }
     func createWebview(_ url:String) {
-        let  request = URLRequest(url: URL.init(string: url)!)
+        print("---lianjie\(url)")
+        var dataUrl = url
+        let array = url.components(separatedBy: "https:")
+        if array.count > 0 {
+            dataUrl = "https:\(array[1])"
+        }
+        print("---lianjiedataUrl\(dataUrl)")
+        if !url.contains("http") {
+            dataUrl = ""
+        }
+        let  request = URLRequest(url: URL.init(string: dataUrl)!)
         wkWebView.rx.observe(Double.self, "estimatedProgress", options:.new, retainSelf: false).map { (p) -> Float in
             var newProgress:Float = 0
             if let progress = p{

@@ -41,6 +41,8 @@ class HDMessageCell: BaseCell {
             let srtData = name.data(using: String.Encoding.unicode, allowLossyConversion: true)!
             let attrStr = try NSAttributedString(data: srtData, options: [.documentType:NSAttributedString.DocumentType.html], documentAttributes: nil)
             nameLabel.attributedText = attrStr
+            nameLabel.font = UIFont.systemFont(ofSize: 16)
+            nameLabel.lineBreakMode = .byTruncatingTail
         }catch let error as NSError {
             print(error.localizedDescription)
         }
