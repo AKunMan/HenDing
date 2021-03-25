@@ -8,8 +8,8 @@
 
 import Foundation
 //https://test-api.hen-ding.com/app
-//let RUNTIME_ENVIRONMENT = "hd_dev"  // 测试环境
-let RUNTIME_ENVIRONMENT = "hd_beta"  // 演示版
+let RUNTIME_ENVIRONMENT = "hd_dev"  // 测试环境
+//let RUNTIME_ENVIRONMENT = "hd_beta"  // 演示版
 //let RUNTIME_ENVIRONMENT = "hd_pord"  // 正式服
 
 let Show_Third = true

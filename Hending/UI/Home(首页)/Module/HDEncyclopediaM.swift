@@ -29,6 +29,7 @@ class HDEncyclopediaM: BaseListM {
         for title in array {
             dataArray.append(getSpace(10))
             dataArray.append(BaseListModel(type:.HeadType,
+                                           judge: title.littleRedDot,
                                            name: title.typeName))
             dataArray.append(getSpace(15,.white))
             let titles = Tools.filEncyList(Application.shared.encyclopediaList,
