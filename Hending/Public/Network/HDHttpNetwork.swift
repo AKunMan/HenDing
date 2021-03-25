@@ -91,6 +91,7 @@ extension HDHttpNetwork{
             let response = try result.get()
             if let json = try response.mapJSON() as? [String:Any]{
                 if FS(json["status"]).toInt() == 401{
+                    UserManager.shared.userInfo.token = ""
                     PRTools.getTopVC()!.toLoginPage()
                 }
                 subject.onNext(json)

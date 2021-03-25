@@ -25,7 +25,7 @@ class HDHomeHeaderNoCell: BaseCell {
         let home = model.data as! HDHomeModel
         setAnimation(array: home.remindMsg, select: select)
         setRemind(home.workRemindCount)
-        codePic.loadImage(model.content)
+        codePic.loadBDImage(model.content)
     }
     
     var remindBlock: VoidBlock?
