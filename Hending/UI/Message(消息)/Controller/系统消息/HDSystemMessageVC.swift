@@ -25,13 +25,20 @@ class HDSystemMessageVC: BaseNormalListVC {
             let data = DataModeCtrl<HDMessageModel>.deserialize(from: res)!
             if data.code == 200 {
                 self.message = data.data!
+                self.readMsg()
                 let array = HDSystemMessageM.getDataArray(self.message)
                 self.updateDataArray(array)
                 self.reloadDataArray()
             }
         }).disposed(by: disposeBag)
-        
-        
+    }
+    
+    func readMsg() {
+        var para = [String:String]()
+        para["newsId"] = message.newsDataId
+        para["newsType"] = message.newsType
+        networkM.requestCompany(.readMessage(para)).subscribe(onNext: { (res) in
+        }).disposed(by: disposeBag)
     }
 }
 extension HDSystemMessageVC{
