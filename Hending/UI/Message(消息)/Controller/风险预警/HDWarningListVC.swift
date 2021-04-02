@@ -59,6 +59,11 @@ extension HDWarningListVC{
 //MARK: 网络请求
 extension HDWarningListVC{
     func getData() {
+        if warnInfoTagId.count == 0 {
+            updateDataArray([BaseListModel]())
+            reloadDataArray()
+            return
+        }
         var para = [String:String]()
         para["pageNum"] = FS(page)
         para["pageSize"] = FS(limit)

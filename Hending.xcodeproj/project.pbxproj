@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0603FCF62609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0603FCF52609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift */; };
 		0609F49C2604867E00D4448B /* HDLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0609F49B2604867E00D4448B /* HDLinkVC.swift */; };
 		0609F4A1260486D500D4448B /* Link.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0609F4A0260486D500D4448B /* Link.storyboard */; };
 		061F4AF9250C6C1600E43AD3 /* HDRecordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F4AF8250C6C1600E43AD3 /* HDRecordListVC.swift */; };
@@ -34,6 +35,7 @@
 		06AA985F2591CC770076200C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AA985E2591CC770076200C /* AVFoundation.framework */; };
 		06AA98652591D86A0076200C /* ZSPostSendCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AA98632591D8690076200C /* ZSPostSendCommentView.swift */; };
 		06AA98662591D86A0076200C /* ZSPostSendCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06AA98642591D86A0076200C /* ZSPostSendCommentView.xib */; };
+		06B551DB260C6EBD002C6781 /* hd_beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06B551DA260C6EBD002C6781 /* hd_beta.plist */; };
 		06B5891D2603272B00B6064A /* HDInspectionSubmitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B5891C2603272B00B6064A /* HDInspectionSubmitVC.swift */; };
 		06B589242603499700B6064A /* HDPushMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B589232603499700B6064A /* HDPushMessageView.swift */; };
 		06B5892C260349A700B6064A /* HDPushMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B5892B260349A700B6064A /* HDPushMessageView.xib */; };
@@ -378,6 +380,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0603FCF52609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDSystemMessgeHtmlVC.swift; sourceTree = "<group>"; };
 		0609F49B2604867E00D4448B /* HDLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDLinkVC.swift; sourceTree = "<group>"; };
 		0609F4A0260486D500D4448B /* Link.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Link.storyboard; sourceTree = "<group>"; };
 		061F4AF8250C6C1600E43AD3 /* HDRecordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HDRecordListVC.swift; path = "../New Group/HDRecordListVC.swift"; sourceTree = "<group>"; };
@@ -406,6 +409,7 @@
 		06AA985E2591CC770076200C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		06AA98632591D8690076200C /* ZSPostSendCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSPostSendCommentView.swift; sourceTree = "<group>"; };
 		06AA98642591D86A0076200C /* ZSPostSendCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSPostSendCommentView.xib; sourceTree = "<group>"; };
+		06B551DA260C6EBD002C6781 /* hd_beta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = hd_beta.plist; sourceTree = "<group>"; };
 		06B5891C2603272B00B6064A /* HDInspectionSubmitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDInspectionSubmitVC.swift; sourceTree = "<group>"; };
 		06B589232603499700B6064A /* HDPushMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDPushMessageView.swift; sourceTree = "<group>"; };
 		06B5892B260349A700B6064A /* HDPushMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDPushMessageView.xib; sourceTree = "<group>"; };
@@ -1513,6 +1517,7 @@
 			isa = PBXGroup;
 			children = (
 				33B58E49247B76A0001E8C9E /* hd_dev.plist */,
+				06B551DA260C6EBD002C6781 /* hd_beta.plist */,
 				33C670AC24AF00E50001A706 /* hd_pord.plist */,
 			);
 			path = Environment;
@@ -1854,6 +1859,7 @@
 			isa = PBXGroup;
 			children = (
 				33D70368248645250047BAE2 /* HDSystemMessageVC.swift */,
+				0603FCF52609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift */,
 			);
 			path = "系统消息";
 			sourceTree = "<group>";
@@ -2251,6 +2257,7 @@
 				335FE474247E6534002F28D3 /* HDSetNormalPushCell.xib in Resources */,
 				33B58E7E247BB373001E8C9E /* HDMine.storyboard in Resources */,
 				33B58E4A247B76A0001E8C9E /* hd_dev.plist in Resources */,
+				06B551DB260C6EBD002C6781 /* hd_beta.plist in Resources */,
 				335412802484FAA200FD4BCC /* HDLoginPswNoMarkCell.xib in Resources */,
 				06264A222591BD3E0049B5EE /* HDHomeHeaderVedioCell.xib in Resources */,
 				33B58DD6247B5FEF001E8C9E /* LaunchScreen.storyboard in Resources */,
@@ -2488,6 +2495,7 @@
 				33C670B224AF14AB0001A706 /* JTShareView.swift in Sources */,
 				33B85A3B24AB948C00DBE37B /* HDAlertRejectView.swift in Sources */,
 				335232BA247F630D002F1386 /* UIImageVIew+MCExtension.swift in Sources */,
+				0603FCF62609CD1B0086DCC6 /* HDSystemMessgeHtmlVC.swift in Sources */,
 				33B58DD1247B5FEC001E8C9E /* Hending.xcdatamodeld in Sources */,
 				33B58E57247B97BB001E8C9E /* BaseHandyModel.swift in Sources */,
 				33541282248516CD00FD4BCC /* HDMineHeadView.swift in Sources */,
@@ -2792,7 +2800,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Hending/狠盯.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = AT688RKRKP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2819,7 +2827,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -2894,7 +2902,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Hending/狠盯.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = AT688RKRKP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2921,7 +2929,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

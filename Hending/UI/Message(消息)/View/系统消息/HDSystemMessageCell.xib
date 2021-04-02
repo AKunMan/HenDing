@@ -12,14 +12,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="KGk-i7-Jjw" customClass="HDSystemMessageCell" customModule="狠盯" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="272"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tm-R6-V32">
-                        <rect key="frame" x="10" y="0.0" width="300" height="116"/>
+                        <rect key="frame" x="10" y="0.0" width="300" height="272"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOM-9f-gwz">
                                 <rect key="frame" x="20" y="18" width="42" height="25"/>
@@ -36,7 +36,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎使用狠盯APP，你的环保安全护航专家" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMx-IU-6qW">
-                                <rect key="frame" x="20" y="55" width="260" height="44"/>
+                                <rect key="frame" x="20" y="55" width="260" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6M8-Cp-d7m"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.58039215690000001" green="0.58431372550000005" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -46,6 +49,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-DS-Ig2">
+                                <rect key="frame" x="20" y="55" width="260" height="200"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5分钟前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UU-20-bzx">
                                 <rect key="frame" x="232" y="22.5" width="48" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -65,9 +76,13 @@
                             <constraint firstAttribute="trailing" secondItem="FMx-IU-6qW" secondAttribute="trailing" constant="20" id="6ex-Bx-jhq"/>
                             <constraint firstAttribute="bottom" secondItem="FMx-IU-6qW" secondAttribute="bottom" constant="17" id="7ha-f4-Lxc"/>
                             <constraint firstAttribute="trailing" secondItem="5UU-20-bzx" secondAttribute="trailing" constant="20" id="SIZ-Sb-TSh"/>
+                            <constraint firstItem="Bw3-DS-Ig2" firstAttribute="trailing" secondItem="FMx-IU-6qW" secondAttribute="trailing" id="SSv-X8-PXH"/>
                             <constraint firstItem="lOM-9f-gwz" firstAttribute="leading" secondItem="4tm-R6-V32" secondAttribute="leading" constant="20" id="Stc-9K-YbV"/>
                             <constraint firstItem="lOM-9f-gwz" firstAttribute="top" secondItem="4tm-R6-V32" secondAttribute="top" constant="18" id="XDM-UR-KVs"/>
+                            <constraint firstItem="Bw3-DS-Ig2" firstAttribute="leading" secondItem="FMx-IU-6qW" secondAttribute="leading" id="ae9-dC-qLV"/>
+                            <constraint firstItem="Bw3-DS-Ig2" firstAttribute="bottom" secondItem="FMx-IU-6qW" secondAttribute="bottom" id="eU4-sT-ggl"/>
                             <constraint firstItem="FMx-IU-6qW" firstAttribute="leading" secondItem="4tm-R6-V32" secondAttribute="leading" constant="20" id="wDF-Ta-uTA"/>
+                            <constraint firstItem="Bw3-DS-Ig2" firstAttribute="top" secondItem="FMx-IU-6qW" secondAttribute="top" id="xPd-Bf-fiP"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -89,6 +104,7 @@
                 <outlet property="dataLabel" destination="FMx-IU-6qW" id="1yn-VV-3vM"/>
                 <outlet property="nameLabel" destination="lOM-9f-gwz" id="gDy-37-0lO"/>
                 <outlet property="subNameLabel" destination="5UU-20-bzx" id="Rw0-BL-UXo"/>
+                <outlet property="wkWebView" destination="Bw3-DS-Ig2" id="yxI-gS-v9R"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </tableViewCell>

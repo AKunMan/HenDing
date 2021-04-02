@@ -80,8 +80,15 @@ extension HDMessageVC{
             let data = DataModeCtrl<HDWarningTypeListModel>.deserialize(from: res)!
             if data.code == 200 {
                 let listModel = data.data!
-                let vc = self.push("HDWarningIndexVC", sb: "HDMessage") as! HDWarningIndexVC
-                vc.warningTypeList = listModel.warningTypeList
+                if listModel.warningTypeList.count > 0 {
+                    let vc = self.push("HDWarningIndexVC", sb: "HDMessage") as! HDWarningIndexVC
+                    vc.warningTypeList = listModel.warningTypeList
+                }else{
+                    let vc = self.push("HDWarningListVC", sb: "HDMessage") as! HDWarningListVC
+                    vc.navTitle = "风险预警"
+                    vc.warnInfoTagId = "1277809017928921090"
+                }
+                
             }
         }).disposed(by: disposeBag)
     }
@@ -93,15 +100,16 @@ extension HDMessageVC{
     }
     func pushSystemList(_ message:HDMessageModel) {
         print("工作提醒")
+        
+        
         if message.newsFileType == "text" {
             let vc = push("HDSystemMessageVC", sb: "HDMessage") as! HDSystemMessageVC
             vc.messageId = message.newsId
-        }else{
-            let vc = push("HDNewsDetailVC", sb: "HDHome") as! HDNewsDetailVC
-            vc.navTitle = message.newsTypeName
-            vc.infoId = message.newsDataId
+            return
         }
-        
+        let vc = push("HDNewsDetailVC", sb: "HDHome") as! HDNewsDetailVC
+        vc.navTitle = message.newsTypeName
+        vc.infoId = message.newsDataId
     }
 }
 
